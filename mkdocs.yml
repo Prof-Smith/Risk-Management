@@ -24,6 +24,8 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      execute: false
 
 nav:
   - Home: index.md
