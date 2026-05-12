@@ -1,3 +1,30 @@
+site_name: Risk Management
+site_description: Applied Risk Management — Concepts, Models, and Cases
+site_author: Zachary Smith
+site_url: https://prof-smith.github.io/Risk-Management/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
 nav:
   - Home: index.md
   - Foundations:
@@ -8,4 +35,3 @@ nav:
   - Case Studies:
       - Overview: cases/index.md
       - LTCM: cases/ltcm.md
-
