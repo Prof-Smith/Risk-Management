@@ -37,4 +37,4 @@ nav:
 - Case Studies:
     - Overview: cases/index.md
     - LTCM (Case): cases/ltcm.md
-    - LTCM (Notebook): cases/ltcm_notebook.ipynb
+    - LTCM (Notebook): cases/LTCM_Risk_Notebook_Real_Data.ipynb
