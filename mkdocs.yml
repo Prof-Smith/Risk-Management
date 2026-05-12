@@ -34,6 +34,7 @@ nav:
   - Market Risk:
       - Overview: market_risk/index.md
       - Value at Risk (VaR): market_risk/var.md
-  - Case Studies:
-      - Overview: cases/index.md
-      - LTCM: cases/ltcm.md
+- Case Studies:
+    - Overview: cases/index.md
+    - LTCM (Case): cases/ltcm.md
+    - LTCM (Notebook): cases/ltcm_notebook.ipynb
