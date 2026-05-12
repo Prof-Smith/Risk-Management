@@ -1,0 +1,19 @@
+# Value at Risk (VaR)
+
+Value at Risk answers a simple question:
+
+> What is the maximum expected loss over a given horizon at a given confidence level?
+
+## Parametric VaR
+
+Assuming returns are normally distributed:
+
+\[
+VaR_{\alpha} = \mu + z_{\alpha}\sigma
+\]
+
+## Key Limitations
+
+- Distributional assumptions
+- Lack of coherence
+- Poor tail risk sensitivity
