@@ -39,7 +39,7 @@ nav:
           - Assignment: cases/lehman_assignment.md
           - Lab: cases/lehman_notebook.ipynb
       
-      - London Whale:
+      - London Whale (2012):
           - Overview: cases/london_whale.md
           - Assignment: cases/london_whale_assignment.md
           - Lab: cases/london_whale_notebook.ipynb
