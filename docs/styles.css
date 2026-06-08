@@ -3,6 +3,18 @@
   --md-accent-fg-color: #16a085;
 }
 
+.md-typeset .admonition {
+  border-radius: 6px;
+  border-left: 3px solid #16a085;  /* subtle accent instead of full border */
+  border: none;
+  background-color: #fafafa;
+  padding: 1rem 1.2rem;
+}
+
+.md-typeset .admonition-title {
+  display: none; /* removes header entirely */
+}
+
 /* Card grid spacing */
 
 .grid.cards > div {
