@@ -2,7 +2,7 @@
 
 ### LTCM — Model Risk and Correlation Breakdown
 
-!!! abstract ""
+!!! note ""
 
     **Insight:** Statistical models fail when assumptions break under stress.
 
@@ -19,7 +19,7 @@
 
 ### Lehman Brothers — Liquidity and Confidence Collapse
 
-!!! abstract ""
+!!! note ""
 
     **Insight:** Institutions fail when funding disappears—not when capital first appears insufficient.
 
@@ -33,7 +33,7 @@
 
 ### London Whale — VaR Failure and Tail Risk
 
-!!! abstract ""
+!!! note ""
 
     **Insight:** Measuring probability of loss is not the same as understanding magnitude.
 
