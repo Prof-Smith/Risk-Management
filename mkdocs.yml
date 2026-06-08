@@ -2,6 +2,13 @@ site_name: Risk Management
 site_description: Applied Risk Management — Concepts, Models, and Cases
 site_author: Zachary Smith
 
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - attr_list
+  - md_in_html
+  
 extra_css:
   - styles.css
   
