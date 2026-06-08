@@ -67,3 +67,10 @@ nav:
           - Overview: cases/london_whale.md
           - Assignment: cases/london_whale_assignment.md
           - Lab: cases/london_whale_notebook.ipynb
+
+      - Global Financial Crisis (2008):
+          - Executive Summary: cases/gfc_summary.md
+          - Overview: cases/gfc.md
+          - Assignment: cases/gfc_assignment.md
+          - Lab: cases/gfc_notebook.ipynb
+
