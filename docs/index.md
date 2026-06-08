@@ -56,6 +56,25 @@
     
 ---
 
+### Global Financial Crisis — Systemic Risk Interaction
+
+!!! note ""
+
+    **Insight:** Systemic crises occur when multiple risk models fail simultaneously.
+
+    **Quant Takeaway:** CDS-implied risk (~4% for BBB), structural credit signals (Z ≈ distress), and portfolio models (WCDR ≈ 3%, CVA ≈ $52.8k) diverge significantly under stress, signaling model breakdown.
+
+    **Model Implication:** Risk management must integrate credit, market, liquidity, and counterparty models rather than relying on any single framework.
+
+    - CDS vs historical PD divergence  
+    - Altman Z reveals hidden fragility  
+    - VaR underestimates systemic loss  
+    - CVA exposes counterparty risk  
+    - Wrong-way risk amplifies losses  
+
+    **Further Analysis:** [View Executive Summary](cases/gfc_summary.md)
+
+---
 ## Analytical Framework
 
 Across all cases, the lab applies a consistent approach:
