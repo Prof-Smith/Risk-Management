@@ -5,14 +5,24 @@
 
 .md-typeset .admonition {
   border-radius: 6px;
-  border-left: 3px solid #16a085;  /* subtle accent instead of full border */
-  border: none;
+  border-left: 4px solid #3f51b5;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
   background-color: #fafafa;
-  padding: 1rem 1.2rem;
+  box-shadow: none;
+}
+
+.md-typeset h3 {
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset hr {
+  margin: 1.5rem 0;
 }
 
 .md-typeset .admonition-title {
-  display: none; /* removes header entirely */
+  display: none;
 }
 
 /* Card grid spacing */
