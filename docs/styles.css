@@ -1,7 +1,14 @@
+:root {
+  --md-primary-fg-color: #2c3e50;
+  --md-accent-fg-color: #16a085;
+}
+
+/* Card grid spacing */
 .grid.cards {
   gap: 1.25rem;
 }
 
+/* Card appearance */
 .grid.cards > * {
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 8px;
@@ -9,12 +16,18 @@
   background-color: #ffffff;
 }
 
-/* Better spacing for headings inside cards */
+/* Headings inside cards */
 .grid.cards h3 {
   margin-top: 0;
 }
 
-/* Dark mode compatibility */
+/* Hover effect (optional polish) */
+.grid.cards > *:hover {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
+
+/* Dark mode support */
 [data-md-color-scheme="slate"] .grid.cards > * {
   background-color: #1e1e1e;
   border-color: rgba(255,255,255,0.08);
