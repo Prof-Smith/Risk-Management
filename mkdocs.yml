@@ -10,6 +10,15 @@ theme:
     - navigation.instant
     - search.highlight
     - content.code.copy
+    - toc.integrate
+
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: teal
+    - scheme: slate
+      primary: blue grey
+      accent: teal
 
 plugins:
   - search
