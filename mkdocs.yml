@@ -1,7 +1,6 @@
 site_name: Risk Management
 site_description: Applied Risk Management — Concepts, Models, and Cases
 site_author: Zachary Smith
-site_url: https://prof-smith.github.io/Risk-Management/
 
 theme:
   name: material
@@ -12,16 +11,6 @@ theme:
     - search.highlight
     - content.code.copy
 
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.details
-  - admonition
-  - toc:
-      permalink: true
-
 plugins:
   - search
   - mkdocs-jupyter:
@@ -29,12 +18,16 @@ plugins:
 
 nav:
   - Home: index.md
+
   - Foundations:
       - Overview: foundations/index.md
+
   - Market Risk:
       - Overview: market_risk/index.md
       - Value at Risk (VaR): market_risk/var.md
-- Case Studies:
-    - Overview: cases/index.md
-    - LTCM (Case): cases/ltcm.md
-    - LTCM (Assignment): cases/ltcm_assignment.md
+
+  - Case Studies:
+      - Overview: cases/index.md
+      - LTCM (Case): cases/ltcm.md
+      - LTCM (Assignment): cases/ltcm_assignment.md
+      - LTCM (Notebook): cases/ltcm_notebook.ipynb
