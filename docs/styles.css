@@ -14,7 +14,11 @@
 }
 
 .md-typeset h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.md-typeset ul li {
+  margin-bottom: 0.2rem;
 }
 
 .md-typeset hr {
