@@ -30,9 +30,8 @@ Nav:
 
 - Case Studies:
     - Overview: cases/index.md
-    
+
     - LTCM:
         - Overview: cases/ltcm.md
         - Assignment: cases/ltcm_assignment.md
         - Lab (Notebook): cases/ltcm_notebook.ipynb
-
