@@ -8,6 +8,5 @@ LTCM provides a canonical example of:
 
 ## Case Materials
 
-- 📄 [LTCM Assignment](ltcm_assignment.md)
-- 📓 [LTCM Notebook](ltcm_notebook.ipynb)
-
+- 📄 [Assignment](ltcm_assignment.md)
+- 📓 [Lab Notebook](ltcm_notebook.ipynb)
