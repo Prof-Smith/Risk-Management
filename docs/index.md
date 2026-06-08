@@ -11,6 +11,7 @@
     - Leverage amplifies model error  
 
 **Further Analysis:** [View Executive Summary](cases/ltcm_summary.md)
+
 ---
 
 ### Lehman Brothers — Liquidity and Confidence Collapse
