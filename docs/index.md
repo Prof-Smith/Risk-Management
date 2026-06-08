@@ -2,7 +2,9 @@
 
 <div class="grid cards" markdown>
 
-### 📊 LTCM — Model Risk and Correlation Breakdown
+<div>
+
+### LTCM — Model Risk and Correlation Breakdown
 
 > Statistical models can fail when assumptions no longer hold.
 
@@ -12,9 +14,11 @@
 
 [View Executive Summary](cases/ltcm_summary.md)
 
----
+</div>
 
-### 🏦 Lehman Brothers — Liquidity and Confidence Collapse
+<div>
+
+### Lehman Brothers — Liquidity and Confidence Collapse
 
 > Firms fail when they lose funding access—not when capital first appears insufficient.
 
@@ -24,9 +28,11 @@
 
 [View Executive Summary](cases/lehman_summary.md)
 
----
+</div>
 
-### ⚠️ London Whale — VaR Failure and Tail Risk
+<div>
+
+### London Whale — VaR Failure and Tail Risk
 
 > Measuring probability of loss is not the same as understanding magnitude.
 
@@ -37,3 +43,6 @@
 [View Executive Summary](cases/london_whale_summary.md)
 
 </div>
+
+</div>
+
