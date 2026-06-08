@@ -6,6 +6,7 @@
 
     **Insight:** Statistical models fail when assumptions break under stress.
 
+    **Quant Takeaway:** Volatility and correlation estimates derived from stable regimes understate joint tail risk, causing portfolio risk to increase nonlinearly under stress.
     
     - Regime shifts invalidate calibration
     - Correlations converge under stress
@@ -23,6 +24,8 @@
 
     **Insight:** Institutions fail when funding disappears—not when capital first appears insufficient.
 
+    **Quant Takeaway:** Balance sheet solvency metrics remained relatively stable, while effective liquidity risk increased discontinuously due to funding withdrawal and valuation uncertainty.
+    
     - Capital vs balance-sheet vulnerability  
     - Liquidity vs solvency breakdown  
     - Confidence erosion drives collapse  
@@ -37,6 +40,8 @@
 
     **Insight:** Measuring probability of loss is not the same as understanding magnitude.
 
+    **Quant Takeaway:** VaR remains insensitive to tail severity, while Expected Shortfall reveals substantially larger losses under stress scenarios, indicating hidden downside exposure.
+    
     - VaR vs Expected Shortfall (ES)  
     - Tail risk revealed under stress  
     - Model limitations exposed  
