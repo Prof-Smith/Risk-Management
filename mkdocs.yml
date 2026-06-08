@@ -53,7 +53,7 @@ nav:
           - Assignment: cases/lehman_assignment.md
           - Lab: cases/lehman_notebook.ipynb
 
-     - London Whale:
+      - London Whale:
           - Executive Summary: cases/london_whale_summary.md
           - Overview: cases/london_whale.md
           - Assignment: cases/london_whale_assignment.md
