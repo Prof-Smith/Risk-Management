@@ -12,3 +12,8 @@ This case will be revisited across multiple sections of the course.
     Proceed to the notebook for quantitative exploration:
 
     📓 ../ltcm_notebook.ipynb
+
+## Case Materials
+
+- 📄 LTCM Assignment → ltcm_assignment.md
+- 📓 LTCM Notebook → ltcm_notebook.ipynb
