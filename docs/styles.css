@@ -4,8 +4,27 @@
 }
 
 /* Card grid spacing */
-.grid.cards {
-  gap: 1.25rem;
+
+.grid.cards > div {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 1.2rem;
+  background-color: #ffffff;
+}
+
+.grid.cards h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.grid.cards p {
+  margin-bottom: 0.8rem;
+}
+
+.grid.cards ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
 }
 
 /* Card appearance */
