@@ -2,38 +2,38 @@
 
 <div class="grid cards" markdown>
 
-- ### **📊 LTCM — Model Risk and Correlation Breakdown**
-  
-  > Statistical models can fail when assumptions about volatility and correlation no longer hold.
+### 📊 LTCM — Model Risk and Correlation Breakdown
 
-  - Regime shifts invalidate historical calibration  
-  - Correlations converge under stress  
-  - Leverage amplifies model error  
+> Statistical models can fail when assumptions no longer hold.
 
-  [View Executive Summary](cases/ltcm_summary.md)
+- Regime shifts invalidate calibration  
+- Correlations converge under stress  
+- Leverage amplifies model error  
 
----
-
-- ### **🏦 Lehman Brothers — Liquidity and Confidence Collapse**
-
-  > Institutions fail when they lose funding access—not when capital first appears insufficient.
-
-  - Capital vs balance-sheet vulnerability  
-  - Liquidity vs solvency breakdown  
-  - Timeline-driven confidence erosion  
-
-  [View Executive Summary](cases/lehman_summary.md)
+[View Executive Summary](cases/ltcm_summary.md)
 
 ---
 
-- ### **⚠️ London Whale — VaR Failure and Tail Risk**
+### 🏦 Lehman Brothers — Liquidity and Confidence Collapse
 
-  > Measuring the likelihood of loss is not the same as understanding its magnitude.
+> Firms fail when they lose funding access—not when capital first appears insufficient.
 
-  - VaR vs Expected Shortfall (ES)  
-  - Tail risk revealed through simulation  
-  - Model limitations under stress  
+- Capital vs balance-sheet vulnerability  
+- Liquidity vs solvency breakdown  
+- Confidence erosion drives collapse  
 
-  [View Executive Summary](cases/london_whale_summary.md)
+[View Executive Summary](cases/lehman_summary.md)
+
+---
+
+### ⚠️ London Whale — VaR Failure and Tail Risk
+
+> Measuring probability of loss is not the same as understanding magnitude.
+
+- VaR vs Expected Shortfall  
+- Tail risk revealed under stress  
+- Model limitations exposed  
+
+[View Executive Summary](cases/london_whale_summary.md)
 
 </div>
