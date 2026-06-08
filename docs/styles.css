@@ -1,0 +1,21 @@
+.grid.cards {
+  gap: 1.25rem;
+}
+
+.grid.cards > * {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+/* Better spacing for headings inside cards */
+.grid.cards h3 {
+  margin-top: 0;
+}
+
+/* Dark mode compatibility */
+[data-md-color-scheme="slate"] .grid.cards > * {
+  background-color: #1e1e1e;
+  border-color: rgba(255,255,255,0.08);
+}
