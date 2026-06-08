@@ -6,11 +6,14 @@
 
     **Insight:** Statistical models fail when assumptions break under stress.
 
-    - Regime shifts invalidate calibration  
-    - Correlations converge under stress  
-    - Leverage amplifies model error  
+    
+    - Regime shifts invalidate calibration
+    - Correlations converge under stress
+    - Leverage amplifies model error
+
 
     **Further Analysis:** [View Executive Summary](cases/ltcm_summary.md)
+
 
 ---
 
