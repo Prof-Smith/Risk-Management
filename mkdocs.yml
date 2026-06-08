@@ -32,6 +32,9 @@ plugins:
   - mkdocs-jupyter:
       execute: false
 
+extra_css:
+  - styles.css
+
 nav:
   - Home: index.md
 
