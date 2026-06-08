@@ -61,5 +61,5 @@ This case highlights a central principle of risk management:
 
 ## Case Materials
 
-- 📄 ltcm_assignment.md  
-- 📓 ltcm_notebook.ipynb
+- 📄 [Assignment](ltcm_assignment.md)
+- 📓 [Lab Notebook](ltcm_notebook.ipynb)
