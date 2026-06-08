@@ -16,7 +16,7 @@ Each case combines:
 
 ## Featured Insights
 
-The following cases highlight distinct failure mechanisms in modern financial systems:
+The following cases highlight distinct failure mechanisms in modern financial systems, progressing from model risk to systemic interaction:
 
 ---
 
@@ -53,6 +53,20 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Highlights limitations of standard risk metrics under stress  
 
 [View London Whale Analysis →](cases/london_whale_summary.md)
+
+---
+
+### Global Financial Crisis — Systemic Risk Interaction
+
+> Systemic crises occur when multiple risk models fail simultaneously.
+
+- Highlights divergence between CDS-implied risk and historical default assumptions  
+- Demonstrates how structural credit signals (Z-score) reveal hidden fragility  
+- Shows how correlation and portfolio losses scale under stress  
+- Illustrates how CVA and counterparty exposure amplify market shocks  
+- Captures how wrong-way risk and downgrade triggers create liquidity spirals  
+
+cases/gfc_summary.md
 
 ---
 
@@ -112,7 +126,9 @@ This lab integrates:
 
 Access full case modules:
 
-- [LTCM](cases/ltcm.md)  
-- [Lehman Brothers (2008)](cases/lehman.md)  
-- [London Whale (2012)](cases/london_whale.md)  
+- [LTCM](cases/ltcm.md)
+- [Lehman Brothers (2008)](cases/lehman.md)
+- [London Whale (2012)](cases/london_whale.md)
+- [Global Financial Crisis (2008)](cases/gfc.md)
+
 
