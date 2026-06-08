@@ -41,17 +41,20 @@ nav:
   - Case Studies:
       - Overview: cases/index.md
 
-      - LTCM (1998):
+      - LTCM:
+          - Executive Summary: cases/ltcm_summary.md
           - Overview: cases/ltcm.md
           - Assignment: cases/ltcm_assignment.md
           - Lab: cases/ltcm_notebook.ipynb
 
       - Lehman (2008):
+          - Executive Summary: cases/lehman_summary.md
           - Overview: cases/lehman.md
           - Assignment: cases/lehman_assignment.md
           - Lab: cases/lehman_notebook.ipynb
-      
-      - London Whale (2012):
+
+     - London Whale:
+          - Executive Summary: cases/london_whale_summary.md
           - Overview: cases/london_whale.md
           - Assignment: cases/london_whale_assignment.md
           - Lab: cases/london_whale_notebook.ipynb
