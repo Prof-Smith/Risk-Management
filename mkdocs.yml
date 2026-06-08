@@ -27,9 +27,15 @@ nav:
       - Overview: market_risk/index.md
       - Value at Risk (VaR): market_risk/var.md
 
-  - Case Studies:
-      - Overview: cases/index.md
-      - LTCM:
-          - Overview: cases/ltcm.md
-          - Assignment: cases/ltcm_assignment.md
-          - Lab: cases/ltcm_notebook.ipynb
+- Case Studies:
+    - Overview: cases/index.md
+
+    - LTCM:
+        - Overview: cases/ltcm.md
+        - Assignment: cases/ltcm_assignment.md
+        - Lab: cases/ltcm_notebook.ipynb
+
+    - Lehman (2008):
+        - Overview: cases/lehman.md
+        - Assignment: cases/lehman_assignment.md
+        - Lab: cases/lehman_notebook.ipynb
