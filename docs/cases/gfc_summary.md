@@ -46,8 +46,10 @@ This case integrates:
 
 ---
 
+
 ## Full Analysis
 
-- 📄 Assignment  
-- 📓 Lab Notebook  
+- 📄 [Assignment](cases/gfc_assignment.md)
+- 📓 [Lab Notebook](cases/gfc_notebook.ipynb)
+
 ``
