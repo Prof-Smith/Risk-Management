@@ -7,3 +7,8 @@ LTCM provides a canonical example of:
 - Correlation breakdown under stress
 
 This case will be revisited across multiple sections of the course.
+
+!!! example "Hands‑On Analysis"
+    Proceed to the notebook for quantitative exploration:
+
+    📓 ../ltcm_notebook.ipynb
