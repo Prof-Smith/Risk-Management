@@ -16,7 +16,8 @@ plugins:
   - mkdocs-jupyter:
       execute: false
 
-nav:
+
+Nav:
   - Home: index.md
 
   - Foundations:
