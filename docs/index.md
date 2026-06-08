@@ -1,12 +1,12 @@
 ## Featured Insights
 
-<div class="grid cards" markdown>
+<div class="grid cards">
 
-<div>
+<div markdown="1">
 
 ### LTCM — Model Risk and Correlation Breakdown
 
-> Statistical models can fail when assumptions no longer hold.
+> Statistical models fail when assumptions about stability break under stress.
 
 - Regime shifts invalidate calibration  
 - Correlations converge under stress  
@@ -16,11 +16,11 @@
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### Lehman Brothers — Liquidity and Confidence Collapse
 
-> Firms fail when they lose funding access—not when capital first appears insufficient.
+> Institutions fail when funding disappears—not when capital first appears insufficient.
 
 - Capital vs balance-sheet vulnerability  
 - Liquidity vs solvency breakdown  
@@ -30,13 +30,13 @@
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### London Whale — VaR Failure and Tail Risk
 
 > Measuring probability of loss is not the same as understanding magnitude.
 
-- VaR vs Expected Shortfall  
+- VaR vs Expected Shortfall (ES)  
 - Tail risk revealed under stress  
 - Model limitations exposed  
 
