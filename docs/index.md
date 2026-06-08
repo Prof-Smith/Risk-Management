@@ -9,7 +9,7 @@
     - Correlations converge under stress  
     - Leverage amplifies model error  
 
-    cases/ltcm_summary.md
+    [View Executive Summary](cases/ltcm_summary.md)
 
 ---
 
@@ -22,7 +22,7 @@
     - Liquidity vs solvency breakdown  
     - Confidence erosion drives collapse  
 
-    cases/lehman_summary.md
+    [View Executive Summary](cases/lehman_summary.md)
 
 ---
 
@@ -35,4 +35,4 @@
     - Tail risk revealed under stress  
     - Model limitations exposed  
 
-    cases/london_whale_summary.md
+    [View Executive Summary](cases/london_whale_summary.md)
