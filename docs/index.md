@@ -42,3 +42,21 @@
     - Model limitations exposed  
 
     **Further Analysis:** [View Executive Summary](cases/london_whale_summary.md)
+    
+---
+
+## Analytical Framework
+
+Across all cases, the lab applies a consistent approach:
+
+- **Measure risk** using quantitative models  
+- **Evaluate model behavior** under stress conditions  
+- **Identify failure mechanisms**  
+- **Translate insights into risk management actions**  
+
+---
+
+## Guiding Principle
+
+> Financial failures are not caused by a single error,  
+> but by the interaction of **models, markets, and human decisions**.
