@@ -11,31 +11,34 @@ understand how Long-Term Capital Management (LTCM) failed.
 
 Answer the following:
 
-1. What was LTCM's core strategy?
-2. Why did leverage amplify risk?
-3. What assumptions about correlation proved incorrect?
-4. How did liquidity risk and market stress interact?
+1. What type of positions exposed LTCM to interest rate risk?
+2. Why does leverage amplify small changes in yields?
+3. What assumptions about volatility and correlation proved incorrect?
+4. How did changing market conditions create systemic risk?
 
 ---
 
 ## Part 2 — Quantitative Analysis
 
-Use the LTCM notebook to explore:
+Use the LTCM notebook to analyze the following:
 
-- Spread convergence under normal conditions
-- Behavior under widening spreads
-- Impact of leverage on losses
-- Breakdown of diversification
+- Changes in yield volatility before and during the crisis  
+- Differences between EWMA and equal-weighted volatility  
+- Principal components of the yield curve (shift, twist, curvature)  
+- Differences in portfolio risk between base and stress regimes  
+- Comparison of VaR across regimes
 
 ---
 
 ## Part 3 — Risk Interpretation
 
-Using your results:
+Using your results from the notebook:
 
-- Compare VaR vs. realized losses
-- Explain why tail risk was underestimated
-- Identify which model assumptions failed
+- Why does volatility estimation matter for risk measurement?
+- What do the PCA results imply about systematic risk exposure?
+- How does risk change between base and stress regimes?
+- Why might VaR underestimate true risk in crisis conditions?
+- What key modeling assumption failed in the LTCM case?
 
 ---
 
