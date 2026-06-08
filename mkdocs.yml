@@ -2,6 +2,9 @@ site_name: Risk Management
 site_description: Applied Risk Management — Concepts, Models, and Cases
 site_author: Zachary Smith
 
+extra_css:
+  - styles.css
+  
 theme:
   name: material
   features:
