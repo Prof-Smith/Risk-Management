@@ -10,8 +10,7 @@
     - Correlations converge under stress  
     - Leverage amplifies model error  
 
-    [View Executive Summary](cases/ltcm_summary.md)
-
+**Further Analysis:** [View Executive Summary](cases/ltcm_summary.md)
 ---
 
 ### Lehman Brothers — Liquidity and Confidence Collapse
@@ -24,7 +23,7 @@
     - Liquidity vs solvency breakdown  
     - Confidence erosion drives collapse  
 
-    [View Executive Summary](cases/lehman_summary.md)
+**Further Analysis:** [View Executive Summary](cases/lehman_summary.md)
 
 ---
 
@@ -38,4 +37,4 @@
     - Tail risk revealed under stress  
     - Model limitations exposed  
 
-    [View Executive Summary](cases/london_whale_summary.md)
+**Further Analysis:** [View Executive Summary](cases/london_whale_summary.md)
