@@ -6,13 +6,15 @@
 
 The Enterprise Risk Management (ERM) capstone integrates all major forms of financial risk—market, credit, liquidity, and operational—into a unified framework for evaluating firm-wide stability.
 
-Unlike individual case studies that isolate specific risk types, this case focuses on **how risks interact across a financial institution** and how those interactions determine the bank’s overall resilience under stress.
+Building on prior cases—including model failures (LTCM), liquidity crises (Lehman), measurement limitations (London Whale), systemic interactions (GFC), and operational failures (Knight Capital)—this case examines how risks interact across a financial institution and how those interactions determine overall resilience under stress.
+
+Unlike individual case studies that isolate specific risk types, this capstone emphasizes **cross-risk interaction, amplification, and decision-making at the enterprise level**.
 
 The analysis reflects real-world ERM practices used by global banks and regulatory frameworks, including:
 
 - Basel III capital and liquidity requirements  
 - Stress testing frameworks (CCAR / DFAST style)  
-- Board-level risk dashboards and decision tools [1](https://emailsaintleo-my.sharepoint.com/personal/zachary_smith_saintleo_edu/Documents/Microsoft%20Copilot%20Chat%20Files/Module8Case-Fin520%20(3).ipynb%20-%20Colab.pdf)  
+- Board-level risk dashboards and decision tools 
 
 ---
 
@@ -20,7 +22,7 @@ The analysis reflects real-world ERM practices used by global banks and regulato
 
 - Market risk measurement (VaR, Expected Shortfall, Monte Carlo simulation)  
 - Credit risk modeling (PD, LGD, EAD, Expected Loss)  
-- Operational risk estimation (Poisson–Lognormal tail risk)  
+- Operational risk estimation (Poisson–Lognormal tail risk and real-time failure scenarios such as Knight Capital)
 - Liquidity risk (maturity ladder, survival horizon)  
 - Integrated stress testing across risk categories  
 - ERM dashboards (severity × likelihood)  
@@ -29,7 +31,7 @@ The analysis reflects real-world ERM practices used by global banks and regulato
 
 ## Analytical Lens
 
-**Insight:** Enterprise risk is driven by the interaction of multiple risk types—not by any single exposure.
+**Insight:** Enterprise risk emerges from both slow-moving exposures and rapid operational failures, with the most severe outcomes driven by interactions across risk types.
 
 **Quant Takeaway:** Market losses (~$10M), credit expected losses (>$400M), operational tail risk (>$1.5B), and liquidity outflows (>$30B) combine to produce firm-wide risk exposures that exceed any individual component.
 
@@ -70,9 +72,10 @@ It answers:
 - Lehman → Liquidity failure  
 - London Whale → Measurement failure  
 - GFC → Systemic interaction  
+- Knight → Operational and model risk failure  
 - SNB → Forward-looking risk design  
 - ABI → Regulatory framework  
-- **ERM → Integrated enterprise risk (capstone)**  
+- **ERM → Integrated enterprise risk (capstone)** 
 
 ---
 
