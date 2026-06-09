@@ -13,7 +13,7 @@ Before the financial crisis, ABI relied heavily on:
 - Proprietary trading  
 - Structured credit positions (CDOs)  
 - Short-term repo funding  
-- Off-balance sheet exposures [1](https://emailsaintleo-my.sharepoint.com/personal/zachary_smith_saintleo_edu/Documents/Microsoft%20Copilot%20Chat%20Files/Combined_Full_Basel_Case_Notebook_Stage8%20(1)%20(2).ipynb%20-%20Colab.pdf)  
+- Off-balance sheet exposures 
 
 This case follows ABI through:
 
@@ -39,7 +39,7 @@ This case follows ABI through:
 
 **Insight:** Changes in regulation fundamentally reshape how risk is measured, capitalized, and managed within financial institutions.
 
-**Quant Takeaway:** ABI’s VaR (~$35–42M pre-crisis) dramatically understated realized losses (~$200M to ~$4.5B), revealing severe model failure and insufficient capital under Basel II. [1](https://emailsaintleo-my.sharepoint.com/personal/zachary_smith_saintleo_edu/Documents/Microsoft%20Copilot%20Chat%20Files/Combined_Full_Basel_Case_Notebook_Stage8%20(1)%20(2).ipynb%20-%20Colab.pdf)  
+**Quant Takeaway:** ABI’s VaR (~$35–42M pre-crisis) dramatically understated realized losses (~$200M to ~$4.5B), revealing severe model failure and insufficient capital under Basel II.
 
 **Model Implication:** Effective risk management requires robust capital, stressed risk measures, and liquidity constraints, rather than reliance on internal models calibrated to stable periods.
 
