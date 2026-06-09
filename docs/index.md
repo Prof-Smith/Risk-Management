@@ -1,4 +1,28 @@
-## Capstone: Enterprise Risk Management
+# Applied Risk Management Lab
+
+---
+
+## Overview
+
+This lab provides a structured framework for understanding financial risk through a combination of real-world case analysis, quantitative modeling, and enterprise-level decision making.
+
+Rather than studying risk in isolation, the lab is organized around how different types of risk emerge, interact, and ultimately shape the stability of financial institutions.
+
+Students progress from analyzing individual failures—such as model breakdowns, liquidity crises, and operational failures—to forward-looking risk design, regulatory frameworks, and ultimately a capstone Enterprise Risk Management (ERM) assessment.
+
+---
+
+## How to Use This Lab
+
+- Begin with **Featured Insights** to understand key risk concepts  
+- Work through **case studies** to analyze distinct failure mechanisms  
+- Complete the **ERM capstone** to integrate all risk dimensions  
+
+The goal is to move from:
+
+> understanding risk → diagnosing failure → designing solutions → making decisions under uncertainty## Capstone: Enterprise Risk Management
+
+---
 
 Enterprise Risk Management (ERM) integrates all major forms of financial risk—market, credit, liquidity, and operational—into a unified framework for evaluating firm-wide stability.
 
@@ -11,7 +35,9 @@ This analysis reflects real-world practices used by global banks, regulators, an
 - Assess capital and liquidity adequacy  
 - Support board-level decision making  
 
-→ View ERM Analysis → [View Executive Summary](cases/erm_summary.md/)
+→ View ERM Analysis → [Summary](cases/erm_summary.md/)
+
+---
 
 ## Featured Insights
 
