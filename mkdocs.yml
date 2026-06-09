@@ -41,7 +41,7 @@ extra_css:
 nav:
   - Home: index.md
 
-  - Capstone: Enterprise Risk Management:
+  - Enterprise Risk Management (Capstone):
       - Overview: cases/erm.md
       - Executive Summary: cases/erm_summary.md
       - Assignment: cases/erm_assignment.md
