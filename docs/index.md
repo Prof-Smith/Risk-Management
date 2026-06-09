@@ -11,7 +11,7 @@ This analysis reflects real-world practices used by global banks, regulators, an
 - Assess capital and liquidity adequacy  
 - Support board-level decision making  
 
-→ View ERM Analysis → (cases/erm_summary.md/)
+→ View ERM Analysis → [View Executive Summary](cases/erm_summary.md/)
 
 ## Featured Insights
 
