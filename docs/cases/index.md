@@ -84,6 +84,20 @@ View SNB Analysis → (/Risk-Management/cases/snb_summary/)
 
 ---
 
+### Atlas Bank International — Basel Regulation and Risk Transformation
+
+> Regulatory frameworks shape how risk is measured, capitalized, and ultimately managed within financial institutions.
+
+- Shows how Basel I enabled regulatory arbitrage through coarse risk weights  
+- Demonstrates how Basel II internal models underestimated risk under calm conditions  
+- Reveals how VaR failed to capture extreme losses during the financial crisis  
+- Illustrates how Basel II.5 introduced stressed risk measures (sVaR, IRC, CRM)  
+- Highlights how Basel III reshaped capital, leverage, and liquidity constraints  
+
+View ABI Analysis → (/Risk-Managementcases/abi_summary/)
+
+---
+
 ## Framework
 
 Across all cases, the lab applies a consistent analytical approach:
@@ -145,3 +159,4 @@ Access full case modules:
 - [London Whale (2012)](cases/london_whale.md)
 - [Global Financial Crisis (2008)](cases/gfc.md)
 - [Sunrise National Bank (ND)](cases/snb.md)
+- [Atlas International Bank (ND)](cases/abi.md)
