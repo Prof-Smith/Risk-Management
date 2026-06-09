@@ -57,9 +57,7 @@ This analysis reflects real-world practices used by global banks, regulators, an
     - Correlations converge under stress
     - Leverage amplifies model error
 
-
     **Further Analysis:** [View Executive Summary](cases/ltcm_summary.md)
-
 
 ---
 
@@ -193,4 +191,21 @@ Across all cases, the lab applies a consistent approach:
 ## Guiding Principle
 
 > Financial failures are not caused by a single error,  
-> but by the interaction of **models, markets, and human decisions**.
+> but by the interaction of **models, markets, and human decisions**.---
+
+---
+
+## About the Author
+
+Zachary Smith is an Associate Professor of Finance with a background in quantitative finance, including six years as a trading-focused quant at Merrill Lynch, where work included structured products, equities, fixed income, and hedge fund strategies.
+
+This Applied Risk Management Lab reflects an effort to bridge the gap between traditional academic instruction and real-world financial decision-making. The lab integrates case analysis, quantitative modeling, and enterprise risk frameworks to develop both technical skill and strategic judgment.
+
+The design emphasizes a structured progression:
+
+- Diagnosing real-world financial failures  
+- Understanding risk measurement and modeling limitations  
+- Applying forward-looking and regulatory frameworks  
+- Integrating risk at the enterprise level through ERM  
+
+The goal is to prepare students to think and act like risk professionals—capable of interpreting complex data, identifying vulnerabilities, and making informed decisions under uncertainty.
