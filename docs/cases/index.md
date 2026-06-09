@@ -70,6 +70,20 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 
 ---
 
+### Sunrise National Bank — Stress Testing and Scenario Analysis
+
+> Stress testing reveals vulnerabilities that are not visible under baseline or historical conditions.
+
+- Demonstrates how capital adequacy diverges under forward-looking Basel III scenarios  
+- Shows how credit losses dominate total losses under stress conditions  
+- Highlights how market and liquidity shocks amplify capital deterioration  
+- Illustrates how supervisory scenarios can breach regulatory CET1 minimums  
+- Uses reverse stress testing to identify viability thresholds and failure boundaries  
+
+View SNB Analysis → (/Risk-Management/cases/snb_summary/)
+
+---
+
 ## Framework
 
 Across all cases, the lab applies a consistent analytical approach:
