@@ -74,3 +74,8 @@ nav:
           - Assignment: cases/gfc_assignment.md
           - Lab: cases/gfc_notebook.ipynb
 
+      - Sunrise National Bank (SNB):
+          - Executive Summary: cases/snb_summary.md
+          - Overview: cases/snb.md
+          - Assignment: cases/snb_assignment.md
+          - Lab: cases/snb_notebook.ipynb
