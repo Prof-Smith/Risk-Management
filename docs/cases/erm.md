@@ -25,7 +25,7 @@ The analysis reflects real-world ERM practices used by global banks and regulato
 - Operational risk estimation (Poisson–Lognormal tail risk and real-time failure scenarios such as Knight Capital)
 - Liquidity risk (maturity ladder, survival horizon)  
 - Integrated stress testing across risk categories  
-- ERM dashboards (severity × likelihood)  
+- ERM dashboards (severity × likelihood)
 
 ---
 
@@ -36,6 +36,9 @@ The analysis reflects real-world ERM practices used by global banks and regulato
 **Quant Takeaway:** Market losses (~$10M), credit expected losses (>$400M), operational tail risk (>$1.5B), and liquidity outflows (>$30B) combine to produce firm-wide risk exposures that exceed any individual component.
 
 **Model Implication:** Effective risk management requires integrating market, credit, liquidity, and operational risk into a unified framework that supports decision-making at the enterprise level.
+
+**Risk Framework:** Model → Liquidity → Measurement → System → Operational → Stress Testing → Regulation → Integration
+*(LTCM → Lehman → Whale → GFC → Knight → SNB → ABI → ERM)*
 
 ---
 
