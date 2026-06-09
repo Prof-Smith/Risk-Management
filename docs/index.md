@@ -209,3 +209,13 @@ The design emphasizes a structured progression:
 - Integrating risk at the enterprise level through ERM  
 
 The goal is to prepare students to think and act like risk professionals—capable of interpreting complex data, identifying vulnerabilities, and making informed decisions under uncertainty.
+
+---
+
+## Contact
+
+For collaboration, teaching resources, or questions about the Applied Risk Management Lab:
+
+- 📧 Email: Zachary.Smith@saintleo.edu  
+- 💻 GitHub: https://github.com/Prof-Smith  
+- 🔗 LinkedIn: https://www.linkedin.com/in/zacharyalexandersmith/
