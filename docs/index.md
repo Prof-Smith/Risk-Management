@@ -197,7 +197,7 @@ Across all cases, the lab applies a consistent approach:
 
 ## About the Author
 
-Zachary Smith is an Associate Professor of Finance with a background in quantitative finance, including six years as a trading-focused quant at Merrill Lynch, where work included structured products, equities, fixed income, and hedge fund strategies.
+Zachary Smith is an Associate Professor of Finance and Economics with a background in quantitative finance, including six years as a trading-focused quant at Merrill Lynch, where work included structured products, equities, fixed income, and hedge fund strategies.
 
 This Applied Risk Management Lab reflects an effort to bridge the gap between traditional academic instruction and real-world financial decision-making. The lab integrates case analysis, quantitative modeling, and enterprise risk frameworks to develop both technical skill and strategic judgment.
 
