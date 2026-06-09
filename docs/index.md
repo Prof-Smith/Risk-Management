@@ -75,6 +75,27 @@
     **Further Analysis:** [View Executive Summary](cases/gfc_summary.md)
 
 ---
+
+### Sunrise National Bank — Stress Testing and Scenario Analysis
+
+!!! note ""
+
+    **Insight:** Stress testing reveals vulnerabilities that are not observable under baseline or historical conditions.
+
+    **Quant Takeaway:** Under stress scenarios, SNB’s CET1 ratio declines sharply (≈4.8%, ≈3.1%, ≈4.3%), with the supervisory scenario breaching regulatory minimums and losses driven primarily by credit exposure.
+
+    **Model Implication:** Risk management must rely on forward-looking scenario analysis and integrate credit, market, and liquidity interactions rather than relying on static capital ratios.
+
+    - Capital adequacy diverges significantly under stress conditions  
+    - Credit losses dominate total losses across scenarios  
+    - Market and liquidity shocks amplify capital deterioration  
+    - Reverse stress testing identifies non-linear failure thresholds  
+    - Scenario design captures interaction effects across risk categories  
+
+    **Further Analysis:** [View Executive Summary](cases/snb_summary/)
+
+---
+
 ## Analytical Framework
 
 Across all cases, the lab applies a consistent approach:
