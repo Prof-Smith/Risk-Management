@@ -79,3 +79,10 @@ nav:
           - Overview: cases/snb.md
           - Assignment: cases/snb_assignment.md
           - Lab: cases/snb_notebook.ipynb
+    
+      - Atlas Bank International (ABI):
+          - Executive Summary: cases/abi_summary.md
+          - Overview: cases/abi.md
+          - Assignment: cases/abi_assignment.md
+          - Lab: cases/abi_notebook.ipynb
+
