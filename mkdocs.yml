@@ -37,20 +37,20 @@ markdown_extensions:
 extra_css:
   - styles.css
 
+
 nav:
   - Home: index.md
 
-  - Foundations:
-      - Overview: foundations/index.md
-
-  - Market Risk:
-      - Overview: market_risk/index.md
-      - Value at Risk (VaR): market_risk/var.md
+  - Capstone: Enterprise Risk Management:
+      - Overview: cases/erm.md
+      - Executive Summary: cases/erm_summary.md
+      - Assignment: cases/erm_assignment.md
+      - Lab: cases/erm_notebook.ipynb
 
   - Case Studies:
       - Overview: cases/index.md
 
-      - LTCM (1998):
+      - LTCM:
           - Executive Summary: cases/ltcm_summary.md
           - Overview: cases/ltcm.md
           - Assignment: cases/ltcm_assignment.md
@@ -62,7 +62,7 @@ nav:
           - Assignment: cases/lehman_assignment.md
           - Lab: cases/lehman_notebook.ipynb
 
-      - London Whale (2012):
+      - London Whale:
           - Executive Summary: cases/london_whale_summary.md
           - Overview: cases/london_whale.md
           - Assignment: cases/london_whale_assignment.md
@@ -79,10 +79,9 @@ nav:
           - Overview: cases/snb.md
           - Assignment: cases/snb_assignment.md
           - Lab: cases/snb_notebook.ipynb
-    
+
       - Atlas Bank International (ABI):
           - Executive Summary: cases/abi_summary.md
           - Overview: cases/abi.md
           - Assignment: cases/abi_assignment.md
           - Lab: cases/abi_notebook.ipynb
-
