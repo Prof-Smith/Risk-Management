@@ -28,7 +28,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Demonstrates how correlations converge under stress  
 - Shows how leverage amplifies model error  
 
-[View LTCM Analysis →](/Risk-Management/cases/ltcm/)
+[View LTCM Analysis →](/Risk-Management/cases/ltcm.md/)
 
 ---
 
@@ -40,7 +40,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Explains liquidity vs solvency distinction  
 - Analyzes timeline-driven confidence erosion  
 
-[View Lehman Analysis →](/Risk-Management/cases/lehman/)
+[View Lehman Analysis →](/Risk-Management/cases/lehman.md/)
 
 ---
 
@@ -52,7 +52,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Illustrates tail risk through simulation and visualization  
 - Highlights limitations of standard risk metrics under stress  
 
-[View London Whale Analysis →](/Risk-Management/cases/london_whale/)
+[View London Whale Analysis →](/Risk-Management/cases/london_whale.md/)
 
 ---
 
@@ -66,7 +66,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Illustrates how CVA and counterparty exposure amplify market shocks  
 - Captures how wrong-way risk and downgrade triggers create liquidity spirals  
 
-[View GFC Analysis →](/Risk-Management/cases/gfc/)
+[View GFC Analysis →](/Risk-Management/cases/gfc.md/)
 
 ---
 
