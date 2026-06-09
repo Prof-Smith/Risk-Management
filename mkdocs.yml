@@ -73,6 +73,12 @@ nav:
           - Overview: cases/gfc.md
           - Assignment: cases/gfc_assignment.md
           - Lab: cases/gfc_notebook.ipynb
+    
+      - Knight Capital:
+          - Executive Summary: cases/knight_summary.md
+          - Overview: cases/knight.md
+          - Assignment: cases/knight_assignment.md
+          - Lab: cases/knight_notebook.ipynb
 
       - Sunrise National Bank (SNB):
           - Executive Summary: cases/snb_summary.md
