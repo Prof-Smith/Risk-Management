@@ -140,9 +140,8 @@ This lab integrates:
 
 Access full case modules:
 
-- [LTCM](cases/ltcm.md)
+- [LTCM (1998)](cases/ltcm.md)
 - [Lehman Brothers (2008)](cases/lehman.md)
 - [London Whale (2012)](cases/london_whale.md)
 - [Global Financial Crisis (2008)](cases/gfc.md)
-
-
+- [Sunrise National Bank (ND)](cases/snb.md)
