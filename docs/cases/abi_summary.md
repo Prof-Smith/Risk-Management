@@ -1,35 +1,73 @@
-# Atlas Bank International (ABI) — Basel Regulation and Risk Transformation
+# Atlas Bank International (ABI) — Regulatory Risk and Model Failure
 
 ---
 
 ## Executive Summary
 
-The Atlas Bank International (ABI) case examines how changes in global banking regulation—from Basel I through Basel III—reshape risk measurement, capital requirements, and institutional behavior.
+The Atlas Bank International case illustrates how regulatory frameworks and internal risk models can jointly fail to capture the true level of risk exposure in financial institutions.
 
-While ABI appeared well-capitalized under pre-crisis regulatory frameworks, it experienced severe losses during the financial crisis due to model limitations, regulatory gaps, and liquidity vulnerabilities.
+Despite appearing well-capitalized under Basel II, ABI incurred massive losses during the financial crisis due to weaknesses in Value-at-Risk (VaR) models, inadequate treatment of tail risk, and reliance on short-term funding.
 
 ---
 
 ## Core Problem
 
-- Coarse risk weights under Basel I enabled regulatory arbitrage  
-- Internal models under Basel II underestimated risk in low-volatility environments  
-- Liquidity risk and funding fragility were not adequately captured  
-- Trading-book exposures were insufficiently capitalized  
+At the center of the failure was a combination of:
+
+- **Overreliance on internal risk models calibrated to low-volatility periods**  
+- **Regulatory arbitrage under simplified capital frameworks**  
+- **Underestimation of trading-book and structured credit risk**  
+- **Inadequate integration of liquidity risk into capital metrics**  
 
 ---
 
 ## Analytical Approach
 
-The case evaluates the evolution of regulation and its impact on ABI:
+Using a stylized global bank, the analysis evaluates:
 
-- Basel I: Standardized risk weights and capital requirements  
-- Basel II: Internal models (PD, LGD, EAD) and trading-book VaR  
-- Crisis period: Breakdown of models and liquidity conditions  
-- Basel II.5: Introduction of stressed risk measures (sVaR, IRC, CRM)  
-- Basel III: Strengthened capital, leverage, and liquidity requirements  
+- Evolution of capital regulation across Basel I, II, II.5, and III  
+- Performance of VaR models relative to realized losses  
+- Changes in trading-book capital requirements under stress measures  
+- Impact of liquidity and funding constraints on balance sheet structure  
 
 ---
 
 ## Key Findings
 
+- VaR significantly underestimated losses during stress conditions  
+- Realized trading losses exceeded modeled risk by a wide margin  
+- Basel II.5 introduced stressed risk measures that materially increased capital requirements 
+- Basel III strengthened capital quality, leverage constraints, and liquidity regulation 
+
+---
+
+## Key Insight
+
+> Risk frameworks do not just measure risk—they shape behavior, and flawed frameworks can amplify systemic vulnerabilities.
+
+---
+
+## Implications for Risk Management
+
+- Risk models must incorporate stress scenarios and tail risk conditions  
+- Capital requirements should reflect both model-based and non-model risks  
+- Liquidity constraints must be integrated into risk frameworks  
+- Regulatory design must minimize incentives for risk transfer and arbitrage  
+
+---
+
+## Position Within Risk Framework
+
+- **LTCM** → Model breakdown  
+- **Lehman Brothers** → Liquidity and confidence collapse  
+- **London Whale** → Measurement failure  
+- **Global Financial Crisis** → Systemic interaction  
+- **Sunrise National Bank** → Stress testing and forward-looking risk design  
+- **Atlas Bank International** → Regulatory design and institutional response  
+
+---
+
+## Full Analysis
+
+- 📄 abi_assignment.md  
+- 📓 abi_notebook.ipynb  
