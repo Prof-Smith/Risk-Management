@@ -1,3 +1,18 @@
+## Capstone: Enterprise Risk Management
+
+Enterprise Risk Management (ERM) integrates all major forms of financial risk—market, credit, liquidity, and operational—into a unified framework for evaluating firm-wide stability.
+
+Unlike individual case studies that isolate specific failure mechanisms, the ERM capstone examines how risks interact, amplify each other, and ultimately determine a bank’s overall resilience under stress.
+
+This analysis reflects real-world practices used by global banks, regulators, and Chief Risk Officers to:
+
+- Evaluate enterprise-wide exposure  
+- Conduct integrated stress testing  
+- Assess capital and liquidity adequacy  
+- Support board-level decision making  
+
+→ View ERM Analysis → (cases/erm_summary.md/)
+
 ## Featured Insights
 
 ### LTCM — Model Risk and Correlation Breakdown
