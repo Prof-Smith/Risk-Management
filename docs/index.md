@@ -91,6 +91,26 @@ This analysis reflects real-world practices used by global banks, regulators, an
 
 ---
 
+### Knight Capital — Operational and Model Risk Failure
+
+!!! note ""
+
+    **Insight:** Operational failures in automated trading systems can generate catastrophic losses within minutes.
+
+    **Quant Takeaway:** Knight accumulated ~$7B in unintended positions and incurred ~$440M in losses within 45 minutes due to faulty code deployment.  
+
+    **Model Implication:** Robust governance, testing, and real-time controls are essential when models operate at high speed and scale.
+
+    - Faulty deployment activated dormant test code   
+    - Lack of change control and validation under SR 11‑7  
+    - Positive feedback loops amplified price distortions  
+    - Losses driven by forced liquidation under adverse price impact  
+    - Operational risk manifests as a financial risk in real time  
+
+    **Further Analysis:** [View Executive Summary](cases/knight_summary.md/)
+
+---
+
 ### Sunrise National Bank — Stress Testing and Scenario Analysis
 
 !!! note ""
