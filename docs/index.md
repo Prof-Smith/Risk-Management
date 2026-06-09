@@ -20,9 +20,11 @@ Students progress from analyzing individual failures—such as model breakdowns,
 
 The goal is to move from:
 
-> understanding risk → diagnosing failure → designing solutions → making decisions under uncertainty## Capstone: Enterprise Risk Management
+> understanding risk → diagnosing failure → designing solutions → making decisions under uncertainty
 
 ---
+
+## Capstone: Enterprise Risk Management
 
 Enterprise Risk Management (ERM) integrates all major forms of financial risk—market, credit, liquidity, and operational—into a unified framework for evaluating firm-wide stability.
 
