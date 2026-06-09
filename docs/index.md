@@ -96,6 +96,26 @@
 
 ---
 
+### Atlas Bank International — Basel Regulation and Risk Transformation
+
+!!! note ""
+
+    **Insight:** Regulatory frameworks shape how risk is measured and can create incentives that amplify systemic vulnerabilities.
+
+    **Quant Takeaway:** ABI’s pre-crisis VaR (~$35–42M) failed to capture realized losses that escalated to ~$4.5B during the financial crisis, while Basel II.5 increased trading-book capital requirements to over $3B under stressed conditions. 
+
+    **Model Implication:** Risk management must supplement internal models with stressed risk measures, capital buffers, and liquidity constraints to prevent underestimation of tail risk and excessive leverage.
+
+    - Basel I enabled regulatory arbitrage through coarse risk weights 
+    - Basel II internal models underestimated risk during low-volatility periods 
+    - VaR failed to capture extreme tail losses during the crisis 
+    - Basel II.5 introduced sVaR, IRC, and CRM to correct trading-book weaknesses 
+    - Basel III strengthened CET1, leverage constraints, and liquidity standards 
+
+    **Further Analysis:** [View Executive Summary](cases/abi_summary/)
+
+---
+
 ## Analytical Framework
 
 Across all cases, the lab applies a consistent approach:
