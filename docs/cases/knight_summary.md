@@ -55,7 +55,11 @@ Within minutes of deployment, faulty code generated millions of erroneous trades
 
 ## Position Within Risk Framework
 
-- Knight → Operational and model risk failure  
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+-	London Whale → Measurement failure
+-	GFC → Systemic interaction
+-	Knight → Operational and model risk failure
 
 ---
 
