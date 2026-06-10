@@ -65,14 +65,10 @@ This limitation makes VaR particularly unreliable in environments characterized 
 
 ## Position Within Risk Framework
 
-The London Whale case complements other major failures:
-
-- **LTCM** → breakdown of model assumptions and correlations  
-- **Lehman Brothers** → liquidity and confidence collapse  
-- **London Whale** → failure of risk measurement and tail risk capture  
-
-Together, these cases illustrate that financial risk failures arise not from a single weakness, but from interacting vulnerabilities across models, markets, and institutions.
-
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+-	London Whale → Measurement failure
+ 
 ---
 
 ## Full Analysis
