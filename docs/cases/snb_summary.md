@@ -32,8 +32,8 @@ The case evaluates:
 
 ## Key Findings
 
-- CET1 declines sharply under stress (~4.8%, ~3.1%, ~4.3%) [1](https://emailsaintleo-my.sharepoint.com/personal/zachary_smith_saintleo_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BaselIII_Full_Plotly_Student_Notebook%20(1)%20(2).ipynb%20-%20Colab.pdf)  
-- Supervisory scenario breaches regulatory capital requirements [1](https://emailsaintleo-my.sharepoint.com/personal/zachary_smith_saintleo_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BaselIII_Full_Plotly_Student_Notebook%20(1)%20(2).ipynb%20-%20Colab.pdf)  
+- CET1 declines sharply under stress (~4.8%, ~3.1%, ~4.3%) 
+- Supervisory scenario breaches regulatory capital requirements
 - Credit losses dominate total losses  
 - Liquidity stress and counterparty exposure amplify impacts  
 
@@ -56,5 +56,5 @@ The case evaluates:
 
 ## Full Analysis
 
-- 📄 snb_assignment.md  
-- 📓 snb_notebook.ipynb  
+- 📄 [Assignment](cases/snb_assignment.md)  
+- 📓 [Lab Notebook](cases/snb_notebook.ipynb)  
