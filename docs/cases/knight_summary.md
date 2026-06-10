@@ -61,5 +61,5 @@ Within minutes of deployment, faulty code generated millions of erroneous trades
 
 ## Full Analysis
 
-- 📄 knight_assignment.md  
-- 📓 knight_notebook.ipynb  
+- 📄 [Assignment](cases/knight_assignment.md)  
+- 📓 [Lab Notebook](cases/knight_notebook.ipynb)  
