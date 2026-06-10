@@ -41,12 +41,6 @@ extra_css:
 nav:
   - Home: index.md
 
-  - Enterprise Risk Management (Capstone):
-      - Overview: cases/erm.md
-      - Executive Summary: cases/erm_summary.md
-      - Assignment: cases/erm_assignment.md
-      - Lab: cases/erm_notebook.ipynb
-
   - Case Studies:
       - Overview: cases/index.md
 
@@ -91,3 +85,9 @@ nav:
           - Overview: cases/abi.md
           - Assignment: cases/abi_assignment.md
           - Lab: cases/abi_notebook.ipynb
+
+  - Enterprise Risk Management (Capstone):
+      - Overview: cases/erm.md
+      - Executive Summary: cases/erm_summary.md
+      - Assignment: cases/erm_assignment.md
+      - Lab: cases/erm_notebook.ipynb
