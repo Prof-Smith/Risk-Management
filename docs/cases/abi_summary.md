@@ -69,5 +69,5 @@ Using a stylized global bank, the analysis evaluates:
 
 ## Full Analysis
 
-- 📄 abi_assignment.md  
-- 📓 abi_notebook.ipynb  
+- 📄 [Assignment](cases/abi_assignment.md)  
+- 📓 [Lab Notebook](cases/abi_notebook.ipynb)
