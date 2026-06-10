@@ -58,12 +58,13 @@ Using a stylized global bank, the analysis evaluates:
 
 ## Position Within Risk Framework
 
-- **LTCM** → Model breakdown  
-- **Lehman Brothers** → Liquidity and confidence collapse  
-- **London Whale** → Measurement failure  
-- **Global Financial Crisis** → Systemic interaction  
-- **Sunrise National Bank** → Stress testing and forward-looking risk design  
-- **Atlas Bank International** → Regulatory design and institutional response  
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+-	London Whale → Measurement failure
+-	GFC → Systemic interaction
+-	Knight → Operational and model risk failure
+-	SNB → Forward-looking risk design
+-	ABI → Regulatory framework
 
 ---
 
