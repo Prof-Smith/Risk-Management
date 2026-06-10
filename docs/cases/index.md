@@ -56,7 +56,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 
 ---
 
-### Knight Capital — Operational and Model Risk Failure
+### **Knight Capital — Operational and Model Risk Failure**
 
 > Operational failures in automated systems can generate catastrophic financial losses within minutes.
 
@@ -70,7 +70,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 
 ---
 
-### Global Financial Crisis — Systemic Risk Interaction
+### **Global Financial Crisis — Systemic Risk Interaction**
 
 > Systemic crises occur when multiple risk models fail simultaneously.
 
@@ -84,7 +84,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 
 ---
 
-### Sunrise National Bank — Stress Testing and Scenario Analysis
+### **Sunrise National Bank — Stress Testing and Scenario Analysis**
 
 > Stress testing reveals vulnerabilities that are not visible under baseline or historical conditions.
 
@@ -98,7 +98,7 @@ View SNB Analysis → (/Risk-Management/cases/snb_summary.md/)
 
 ---
 
-### Atlas Bank International — Basel Regulation and Risk Transformation
+### **Atlas Bank International — Basel Regulation and Risk Transformation**
 
 > Regulatory frameworks shape how risk is measured, capitalized, and ultimately managed within financial institutions.
 
