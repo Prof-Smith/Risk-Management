@@ -77,5 +77,5 @@ Together, these cases illustrate that financial risk failures arise not from a s
 
 ## Full Analysis
 
-- 📄 Assignment  
-- 📓 Lab Notebook  
+- 📄 [Assignment](cases/london_whale_assignment.md)  
+- 📓 [Lab Notebook](cases/london_whale_notebook.ipynb)  
