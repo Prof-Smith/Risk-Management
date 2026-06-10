@@ -59,6 +59,13 @@ The analysis evaluates:
 
 ---
 
+## Position Within Risk Framework
+
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+
+---
+
 ## Full Analysis
 
 - 📄 [Assignment](cases/lehman_assignment.md)  
