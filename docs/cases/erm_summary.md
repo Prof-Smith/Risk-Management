@@ -59,13 +59,14 @@ This case synthesizes multiple risk frameworks:
 
 ## Position Within Risk Framework
 
-- LTCM → Model failure  
-- Lehman → Liquidity failure  
-- London Whale → Measurement failure  
-- GFC → Systemic interaction  
-- SNB → Forward-looking risk design  
-- ABI → Regulatory framework  
-- **ERM → Integrated enterprise risk (capstone)**
+LTCM → Model failure
+Lehman → Liquidity failure
+London Whale → Measurement failure
+GFC → Systemic interaction
+Knight → Operational and model risk failure
+SNB → Forward-looking risk design
+ABI → Regulatory framework
+**ERM → Integrated enterprise risk (capstone)**
 
 ---
 
