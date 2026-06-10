@@ -40,7 +40,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Explains liquidity vs solvency distinction  
 - Analyzes timeline-driven confidence erosion  
 
-[View Lehman Analysis →](/Risk-Management/cases/ltcm_summary/)
+[View Lehman Analysis →](/Risk-Management/cases/ltcm_summary.md/)
 
 ---
 
@@ -52,7 +52,21 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Illustrates tail risk through simulation and visualization  
 - Highlights limitations of standard risk metrics under stress  
 
-[View London Whale Analysis →](/Risk-Management/cases/london_whale_summary/)
+[View London Whale Analysis →](/Risk-Management/cases/london_whale_summary.md/)
+
+---
+
+### Knight Capital — Operational and Model Risk Failure
+
+> Operational failures in automated systems can generate catastrophic financial losses within minutes.
+
+- Demonstrates how faulty code deployment triggered millions of unintended trades  
+- Accumulated ~$7B in unintended positions and ~$440M in losses within 45 minutes  
+- Highlights failures in change control, testing, and model governance (SR 11‑7)  
+- Shows how market impact and forced liquidation amplify losses  
+- Illustrates how operational risk can become immediate financial risk in high-speed trading environments  
+
+[View Knight Capital Analysis →](/Risk-Management/cases/knight_summary.md/)
 
 ---
 
@@ -66,7 +80,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Illustrates how CVA and counterparty exposure amplify market shocks  
 - Captures how wrong-way risk and downgrade triggers create liquidity spirals  
 
-[View GFC Analysis →](/Risk-Management/cases/gfc_summary/)
+[View GFC Analysis →](/Risk-Management/cases/gfc_summary.md/)
 
 ---
 
@@ -80,7 +94,7 @@ The following cases highlight distinct failure mechanisms in modern financial sy
 - Illustrates how supervisory scenarios can breach regulatory CET1 minimums  
 - Uses reverse stress testing to identify viability thresholds and failure boundaries  
 
-View SNB Analysis → (/Risk-Management/cases/snb_summary/)
+View SNB Analysis → (/Risk-Management/cases/snb_summary.md/)
 
 ---
 
@@ -94,7 +108,7 @@ View SNB Analysis → (/Risk-Management/cases/snb_summary/)
 - Illustrates how Basel II.5 introduced stressed risk measures (sVaR, IRC, CRM)  
 - Highlights how Basel III reshaped capital, leverage, and liquidity constraints  
 
-View ABI Analysis → (/Risk-Managementcases/abi_summary/)
+View ABI Analysis → (/Risk-Managementcases/abi_summary.md/)
 
 ---
 
