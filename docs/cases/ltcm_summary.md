@@ -58,6 +58,12 @@ Using yield curve data (1997–1998), the analysis evaluates:
 
 ---
 
+## Position Within Risk Framework
+
+-	LTCM → Model failure
+
+---
+
 ## Full Analysis
 
 - 📄 [Assignment](cases/ltcm_assignment.md)  
