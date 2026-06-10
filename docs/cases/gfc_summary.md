@@ -46,10 +46,16 @@ This case integrates:
 
 ---
 
+## Position Within Risk Framework
+
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+-	London Whale → Measurement failure
+-	GFC → Systemic interaction
+
+---
 
 ## Full Analysis
 
 - 📄 [Assignment](cases/gfc_assignment.md)
 - 📓 [Lab Notebook](cases/gfc_notebook.ipynb)
-
-``
