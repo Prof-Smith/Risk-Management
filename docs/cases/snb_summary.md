@@ -45,6 +45,17 @@ The case evaluates:
 
 ---
 
+## Position Within Risk Framework
+
+-	LTCM → Model failure
+-	Lehman → Liquidity failure
+-	London Whale → Measurement failure
+-	GFC → Systemic interaction
+-	Knight → Operational and model risk failure
+-	SNB → Forward-looking risk design
+
+---
+
 ## Implication for Risk Management
 
 - Firms must adopt forward-looking stress testing frameworks  
