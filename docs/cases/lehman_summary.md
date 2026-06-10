@@ -61,5 +61,5 @@ The analysis evaluates:
 
 ## Full Analysis
 
-- 📄 Assignment  
-- 📓 Lab Notebook  
+- 📄 [Assignment](cases/lehman_assignment.md)  
+- 📓 [Lab Notebook](cases/lehman_notebook.ipynb)
