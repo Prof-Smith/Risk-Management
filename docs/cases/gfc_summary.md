@@ -57,5 +57,5 @@ This case integrates:
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/gfc_assignment.md)
-- 📓 [Lab Notebook](cases/gfc_notebook.ipynb)
+- 📄 [Assignment](/Risk-Management/cases/gfc_assignment.md/)
+- 📓 [Lab Notebook](/Risk-Management/cases/gfc_notebook.ipynb/)
