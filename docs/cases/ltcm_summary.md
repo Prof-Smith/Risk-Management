@@ -66,5 +66,5 @@ Using yield curve data (1997–1998), the analysis evaluates:
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/ltcm_assignment.md)  
-- 📓 [Lab Notebook](cases/ltcm_notebook.ipynb)
+- 📄 [Assignment](/Risk-Management/cases/ltcm_assignment/)  
+- 📓 [Lab Notebook](/Risk-Management/cases/ltcm_notebook/)
