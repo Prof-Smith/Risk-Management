@@ -82,5 +82,5 @@ This case synthesizes all prior cases to answer:
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/erm_assignment.md)  
-- 📓 [Lab Notebook](cases/erm_notebook.ipynb)
+- 📄 [Assignment](/Risk-Management/cases/erm_assignment.md/)  
+- 📓 [Lab Notebook](/Risk-Management/cases/erm_notebook.ipynb/)
