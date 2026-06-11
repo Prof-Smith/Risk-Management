@@ -68,5 +68,5 @@ The analysis evaluates:
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/lehman_assignment.md)  
-- 📓 [Lab Notebook](cases/lehman_notebook.ipynb)
+- 📄 [Assignment](/Risk-Management/cases/lehman_assignment/)  
+- 📓 [Lab Notebook](cases/lehman_notebook/)
