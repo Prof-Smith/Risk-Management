@@ -1,4 +1,5 @@
 # Applied Risk Management Lab
+_Analyzing financial failures, stress-testing models, and designing better decisions under uncertainty._
 
 ---
 
@@ -16,19 +17,35 @@ Students progress from analyzing individual failures—such as model breakdowns,
 
 - Begin with **Featured Insights** to understand key risk concepts  
 - Work through **case studies** to analyze distinct failure mechanisms  
-- Complete the **ERM capstone** to integrate all risk dimensions  
+- Complete the **ERM capstone** to integrate all risk dimensions 
 
-The goal is to move from:
-
-> understanding risk → diagnosing failure → designing solutions → making decisions under uncertainty
+**Core Progression**
+> Case Analysis → Quant Modeling → Stress Testing → ERM Integration
 
 ---
+
+## How the Lab Is Structured
+
+The lab is organized into three layers:
+
+- Case Diagnostics — Students analyze major financial failures and identify what went wrong.
+- Quantitative Risk Modeling — Students use models to measure exposure, stress assumptions, and reveal hidden vulnerabilities.
+- Enterprise Integration — Students synthesize market, credit, liquidity, and operational risks into a unified ERM framework.
+
+---
+
+## What Students Produce
+
+- Executive summaries
+- Risk models
+- Stress tests
+- Capstone ERM analyses
 
 ## Capstone: Enterprise Risk Management
 
 Enterprise Risk Management (ERM) integrates all major forms of financial risk—market, credit, liquidity, and operational—into a unified framework for evaluating firm-wide stability.
 
-Unlike individual case studies that isolate specific failure mechanisms, the ERM capstone examines how risks interact, amplify each other, and ultimately determine a bank’s overall resilience under stress.
+The ERM capstone is the final integration point of the lab. After analyzing risk in isolated failures, students move to firm-wide risk architecture—where market, credit, liquidity, and operational risks interact and determine institutional resilience.
 
 This analysis reflects real-world practices used by global banks, regulators, and Chief Risk Officers to:
 
@@ -197,7 +214,7 @@ Across all cases, the lab applies a consistent approach:
 
 ## About the Author
 
-Zachary Smith is an Associate Professor of Finance and Economics with a background in quantitative finance, including six years as a trading-focused quant at Merrill Lynch, where work included structured products, equities, fixed income, and hedge fund strategies.
+Zachary Smith is an Associate Professor of Finance and Economics with a background in quantitative finance, including six years as a trading-focused analyst at Merrill Lynch across structured products, equities, fixed income, and hedge fund strategies. The Applied Risk Management Lab was created to bridge academic instruction and real-world financial decision-making through case analysis, quantitative modeling, and enterprise risk frameworks.
 
 This Applied Risk Management Lab reflects an effort to bridge the gap between traditional academic instruction and real-world financial decision-making. The lab integrates case analysis, quantitative modeling, and enterprise risk frameworks to develop both technical skill and strategic judgment.
 
