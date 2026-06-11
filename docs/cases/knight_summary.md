@@ -65,5 +65,5 @@ Within minutes of deployment, faulty code generated millions of erroneous trades
 
 ## Full Analysis
 
-- 📄 [Assignment](/Risk-Management/cases/knight_assignment.md/)  
-- 📓 [Lab Notebook](/Risk-Management/cases/knight_notebook.ipynb/)  
+- 📄 [Assignment](/Risk-Management/cases/knight_assignment/)  
+- 📓 [Lab Notebook](/Risk-Management/cases/knight_notebook/)  
