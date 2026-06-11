@@ -73,5 +73,5 @@ This limitation makes VaR particularly unreliable in environments characterized 
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/london_whale_assignment.md)  
-- 📓 [Lab Notebook](cases/london_whale_notebook.ipynb)  
+- 📄 [Assignment](/Risk-Management/cases/london_whale_assignment)  
+- 📓 [Lab Notebook](/Risk-Management/cases/london_whale_notebook)  
