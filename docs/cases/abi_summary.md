@@ -70,5 +70,5 @@ Using a stylized global bank, the analysis evaluates:
 
 ## Full Analysis
 
-- 📄 [Assignment](Risk_Management/docs/cases/abi_assignment.md)  
-- 📓 [Lab Notebook](Risk_Management/docs/cases/abi_notebook.ipynb)
+- 📄 [Assignment](/Risk-Management/cases/abi_assignment.md)  
+- 📓 [Lab Notebook](/Risk-Management/cases/abi_notebook.ipynb)
