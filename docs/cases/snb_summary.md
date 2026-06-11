@@ -67,5 +67,5 @@ The case evaluates:
 
 ## Full Analysis
 
-- 📄 [Assignment](cases/snb_assignment.md)  
-- 📓 [Lab Notebook](cases/snb_notebook.ipynb)  
+- 📄 [Assignment](/Risk-Management/cases/snb_assignment/)  
+- 📓 [Lab Notebook](/Risk-Management/cases/snb_notebook/)  
