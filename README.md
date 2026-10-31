@@ -1,11 +1,8 @@
-# Blackridge Comic Risk Lab v2
+# Blackridge Comic Risk Lab v3
 
-Updates:
-- Adds a disclaimer gate before the introduction.
-- Defines all eight characters in the introduction.
-- Adds a Monte Carlo convergence visualization to the baseline scene.
-- Fixes the Plotly fill-color error by using RGBA colors.
-- Compresses portraits, typography, chart heights, spacing, and scene layouts so each page is designed to fit a standard laptop/desktop viewport without vertical sprawl.
-- Retains comic-style synthetic character exchanges and excludes participant decision forms.
-
-Run with `streamlit run app.py` after installing `requirements.txt`.
+Changes:
+- Replaces the jagged histogram with smoothed density curves, direct VaR/CVaR callouts, a focused x-axis, and a restrained tail highlight.
+- Adds three expression variants for each fictional cast member: neutral, concerned, and decisive.
+- Uses scene-specific expressions during synthetic exchanges.
+- Reduces jumpiness by putting Monte Carlo and shock controls inside forms, caching simulation outputs, fixing chart sizes, preserving chart UI state, and disabling Plotly toolbars.
+- Keeps the disclaimer gate, complete cast introduction, and no-decision ending.
