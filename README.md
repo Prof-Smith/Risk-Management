@@ -1,10 +1,15 @@
-# Interactive Risk Lab upgrade
+# Experienced Cases Upgrade
 
-Copy these two files into the corresponding folders in the repository:
+Replace `experience/live_case.py` and add `components/case_experience.py`.
 
-- `experience/risk_map.py`
-- `components/risk_visuals.py`
+This changes each case from a dashboard into a five-room experience:
 
-No additional dependency is required beyond the scaffold's existing Plotly, NumPy, Pandas, and Streamlit requirements.
+1. Briefing
+2. Evidence Room
+3. Decision Desk
+4. Shock Room
+5. Board Defense
 
-The visuals use deterministic synthetic data to demonstrate the interaction pattern. Replace the starter calculations with validated course models and case data before instructional use.
+The workflow preserves the participant's initial action and confidence, introduces a controllable shock, calculates a decision boundary, and requires a defended final recommendation.
+
+The current charts use deterministic synthetic data and the scaffold's illustrative risk engine. Replace those calculations with the validated course models and actual case evidence before instructional use.
