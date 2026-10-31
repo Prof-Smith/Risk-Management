@@ -1,0 +1,25 @@
+id: portfolio_tail_risk
+title: The Correlation Breakdown
+narrative: >
+  An investment committee must decide whether to retain, hedge, reduce, or reject
+  a proposed portfolio position before the full stress profile is revealed.
+risk_domains:
+  - Market risk
+  - Liquidity risk
+  - Model risk
+decision_prompt: What should the institution do with the proposed exposure?
+decision_choices:
+  - Retain
+  - Hedge
+  - Reduce
+  - Reject
+baseline:
+  volatility: 18.0
+  correlation: 0.25
+  confidence: 0.95
+  horizon_days: 10
+  risk_limit: 9.0
+shock:
+  volatility_multiplier: 2.0
+  correlation_floor: 0.85
+reversal_target: Expected shortfall relative to the institutional risk limit

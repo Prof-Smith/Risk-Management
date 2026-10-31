@@ -1,0 +1,18 @@
+id: counterparty_credit
+title: The Counterparty Threshold
+narrative: >
+  A profitable transaction must be re-evaluated after a deterioration in
+  counterparty quality and recovery assumptions.
+risk_domains: [Credit risk, Concentration risk]
+decision_prompt: Should the institution approve the transaction?
+decision_choices: [Approve, Hedge, Reduce, Reject]
+baseline:
+  volatility: 15.0
+  correlation: 0.20
+  confidence: 0.95
+  horizon_days: 10
+  risk_limit: 8.0
+shock:
+  volatility_multiplier: 1.5
+  correlation_floor: 0.60
+reversal_target: Default and recovery assumptions that eliminate economic value
