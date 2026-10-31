@@ -1,22 +1,12 @@
-# Northstar Private Debt Lab
+# Northstar Private Debt Lab v2
 
-A standalone Streamlit implementation of the fictional Northstar Direct Lending Fund III / Meridian Cloud Systems amendment case.
+This version turns comments into a persistent decision journal and links borrower deterioration to a fund-level Monte Carlo loss distribution, VaR/CVaR, valuation staleness, redemption pressure, liquidity waterfall, forced-sale loss, economic NAV, and an economic asset/liability coverage ratio.
 
-## Run locally
+## Run
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Deploy
-
-Place this folder's contents in the root of a GitHub repository and deploy `app.py` through Streamlit Community Cloud.
-
-## Experience sequence
-
-Mandate → Evidence → Commit → Scenario Lab → Sponsor Offer → Board Defense
-
-All firms, figures, probabilities, and outcomes are synthetic. The calculations are teaching models rather than investment advice or representations of real transactions.
+All data and firms are fictional. The financial engine is a transparent teaching model, not investment advice or a production risk model.
