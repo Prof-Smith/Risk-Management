@@ -73,10 +73,45 @@ elif s=='regime':
   f.add_trace(go.Scatter(x=[val,val],y=[0,ymax],mode='lines',name=label,line=dict(color=color,width=4,dash=dash),customdata=[[label,val,cl],[label,val,cl]],hovertemplate='<b>%{customdata[0]}</b><br>$%{customdata[1]:.1f} million<br>Confidence: %{customdata[2]}<extra></extra>'))
  f.update_layout(hovermode='closest');f.update_xaxes(title='One-day portfolio loss ($m)');st.plotly_chart(style(f,'Mortgage portfolio loss distribution with hoverable VaR and CVaR',455),width='stretch',config={'displayModeBar':False});st.caption('Dashed = VaR. Dotted = CVaR. Hover over a line for the estimate.');nav('tuld')
 elif s=='tuld':
- header('12:16 AM · EXECUTIVE COMMITTEE','The model reaches Tuld','Peter reduces the regime change to where the tail begins and what happens inside it.')
+ header('12:16 AM · EXECUTIVE COMMITTEE','The model reaches Tuld','Peter compares the original base-case model with the current post-regime-shift model. The same mortgage holdings now produce materially different VaR and CVaR estimates because volatility and cross-pool dependence have changed.')
+ base_losses,current_losses=losses('Initial'),losses('Updated')
+ base_var,base_cvar,base_vol=stats(base_losses,st.session_state.confidence)
+ current_var,current_cvar,current_vol=stats(current_losses,st.session_state.confidence)
+ st.markdown('### Base case versus current regime')
+ summary=st.columns(6)
+ items=[
+  ('Base-case VaR',base_var,None),('Current VaR',current_var,current_var/base_var),
+  ('Base-case CVaR',base_cvar,None),('Current CVaR',current_cvar,current_cvar/base_cvar),
+  ('Base-case vol',base_vol,None),('Current vol',current_vol,current_vol/base_vol)]
+ for col,(label,value,multiple) in zip(summary,items):
+  col.metric(label,f'${value:.1f}m',None if multiple is None else f'×{multiple:.1f}',delta_color='inverse')
+ left,right=st.columns(2,gap='large')
+ with left:
+  st.markdown('#### VaR: where the tail begins')
+  fig=go.Figure(go.Bar(
+   x=['Base case','Current regime'],y=[base_var,current_var],
+   marker_color=['#0f7890','#c7474b'],
+   text=[f'${base_var:.1f}m',f'${current_var:.1f}m'],textposition='outside',
+   customdata=[['Base-case VaR',base_var],['Current-regime VaR',current_var]],
+   hovertemplate='<b>%{customdata[0]}</b><br>$%{customdata[1]:.1f} million<extra></extra>'))
+  fig.update_yaxes(title='One-day loss threshold ($m)',range=[0,current_var*1.28])
+  st.plotly_chart(style(fig,'VaR comparison: base case vs current regime',355),width='stretch',config={'displayModeBar':False})
+  st.markdown(f"<div class='insight'><b>Interpretation</b><br>The {st.session_state.confidence:.1%} loss threshold increases from <b>${base_var:.1f} million</b> to <b>${current_var:.1f} million</b>, or <b>{current_var/base_var:.1f} times</b> the base-case estimate.</div>",unsafe_allow_html=True)
+ with right:
+  st.markdown('#### CVaR: what happens inside the tail')
+  fig=go.Figure(go.Bar(
+   x=['Base case','Current regime'],y=[base_cvar,current_cvar],
+   marker_color=['#5c99a5','#8f2230'],
+   text=[f'${base_cvar:.1f}m',f'${current_cvar:.1f}m'],textposition='outside',
+   customdata=[['Base-case CVaR',base_cvar],['Current-regime CVaR',current_cvar]],
+   hovertemplate='<b>%{customdata[0]}</b><br>$%{customdata[1]:.1f} million<extra></extra>'))
+  fig.update_yaxes(title='Average loss beyond VaR ($m)',range=[0,current_cvar*1.28])
+  st.plotly_chart(style(fig,'CVaR comparison: base case vs current regime',355),width='stretch',config={'displayModeBar':False})
+  st.markdown(f"<div class='insight'><b>Interpretation</b><br>Average loss after crossing VaR rises from <b>${base_cvar:.1f} million</b> to <b>${current_cvar:.1f} million</b>, or <b>{current_cvar/base_cvar:.1f} times</b> the base-case estimate.</div>",unsafe_allow_html=True)
  a,b=st.columns(2)
- with a:talk('Peter Sullivan','peter','decisive','Updated volatility and correlation move both VaR and CVaR sharply higher.')
- with b:talk('John Tuld','john','decisive','If both the threshold and the tail break the old assumptions, delay compounds the problem.')
+ with a:talk('Peter Sullivan','peter','decisive','The holdings are unchanged. The base case and current case diverge because the volatility regime and dependence structure changed.')
+ with b:talk('John Tuld','john','decisive','The comparison is the problem: the current book no longer behaves like the book described by the base-case model.')
+ st.caption('Base case = first 250 synthetic daily observations. Current regime = final 250 observations after the modeled volatility and correlation shift.')
  nav('sale')
 elif s=='sale':
  header('8:00 AM · TRADING FLOOR','Sam executes the fire sale','Synthetic discounts convert modeled risk into realized execution loss.')
