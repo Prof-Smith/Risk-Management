@@ -11,7 +11,7 @@ for k,v in {'accepted':False,'scene':'intro','severity':60,'confidence':.95,'sim
 CHAR={'John Tuld':('john','Chief Executive Officer','#173F5F'),'Eric Dale':('eric','Former Head of Risk','#526777'),'Sarah Robertson':('sarah','Chief Risk Officer','#B7872B'),'Sam Rogers':('sam','Head of Portfolio Management','#245B77'),'Peter Sullivan':('peter','Quantitative Risk Analyst','#168C86'),'Seth Bregman':('seth','Associate Risk Analyst','#3B8EBA'),'Will Emerson':('will','Head of Trading & Portfolio Solutions','#A56632'),'Jared Cohen':('jared','Head of Private Credit','#42735B')}
 
 st.markdown('''<style>
-.block-container{max-width:1360px;padding-top:.35rem;padding-bottom:.7rem}.eyebrow{color:#174868;font-size:.68rem;font-weight:800;letter-spacing:.14em}.scene-title{font-family:Georgia,serif;font-size:1.65rem;font-weight:700;color:#102A43;margin:.03rem 0 .12rem}.scene-copy{font-family:Georgia,serif;font-size:.96rem;line-height:1.38;max-width:1080px}.comic{border:1.5px solid #183B56;border-radius:12px;background:linear-gradient(145deg,#fff,#f2f6f8);padding:.5rem;box-shadow:3px 4px 0 #DCE5EA;height:100%}.comic-name{font-weight:900;color:#102A43;font-size:.9rem}.comic-role{font-size:.62rem;color:#60788A;text-transform:uppercase;letter-spacing:.06em}.bubble{background:white;color:#102A43;border:1.5px solid #183B56;border-radius:13px;padding:.58rem .7rem;margin-top:.35rem;font-family:Georgia,serif;font-size:.84rem;line-height:1.27;min-height:68px}.calc{border-left:4px solid #D69C35;background:#FFF9EC;color:#40351E;padding:.55rem .75rem;border-radius:6px;font-size:.82rem}.stButton>button{border-radius:7px;font-weight:750}[data-testid="stMetricValue"]{font-size:1.28rem}[data-testid="stMetricLabel"]{font-size:.72rem}.stProgress{margin-bottom:0}h1{font-size:1.9rem!important;margin:.03rem 0!important}.stForm{border:0!important;padding:0!important}div[data-testid="stImage"] img{max-height:150px;object-fit:cover}.element-container{margin-bottom:.15rem}
+.block-container{max-width:1360px;padding-top:.35rem;padding-bottom:.7rem}.eyebrow{color:#174868;font-size:.68rem;font-weight:800;letter-spacing:.14em}.scene-title{font-family:Georgia,serif;font-size:1.65rem;font-weight:700;color:#102A43;margin:.03rem 0 .12rem}.scene-copy{font-family:Georgia,serif;font-size:.96rem;line-height:1.38;max-width:1080px}.comic{border:1.5px solid #183B56;border-radius:12px;background:linear-gradient(145deg,#fff,#f2f6f8);padding:.5rem;box-shadow:3px 4px 0 #DCE5EA;height:100%}.comic-name{font-weight:900;color:#102A43;font-size:.9rem}.comic-role{font-size:.62rem;color:#60788A;text-transform:uppercase;letter-spacing:.06em}.bubble{background:white;color:#102A43;border:1.5px solid #183B56;border-radius:13px;padding:.58rem .7rem;margin-top:.35rem;font-family:Georgia,serif;font-size:.84rem;line-height:1.27;min-height:68px}.calc{border-left:4px solid #D69C35;background:#FFF9EC;color:#40351E;padding:.55rem .75rem;border-radius:6px;font-size:.82rem}.stButton>button{border-radius:7px;font-weight:750}[data-testid="stMetricValue"]{font-size:1.28rem}[data-testid="stMetricLabel"]{font-size:.72rem}.stProgress{margin-bottom:0}h1{font-size:1.9rem!important;margin:.03rem 0!important}.stForm{border:0!important;padding:0!important}div[data-testid="stImage"] img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 42%;border-radius:10px}.element-container{margin-bottom:.15rem}
 </style>''',unsafe_allow_html=True)
 
 def style(fig,title,h=320):
@@ -25,7 +25,7 @@ def convergence(confidence,max_trials):
     for n in checkpoints:
         r=sim(0,confidence,int(n),47);v.append(r['var']);c.append(r['cvar'])
     return checkpoints,np.array(v),np.array(c)
-def portrait(name,state):return f"assets/expressions/{CHAR[name][0]}_{state}.png"
+def portrait(name,state):return f"assets/portraits/{CHAR[name][0]}_{state}.png"
 def panel(name,text,state='neutral'):
     color=CHAR[name][2];st.markdown(f"<div class='comic' style='border-color:{color}'>",unsafe_allow_html=True);st.image(portrait(name,state),width='stretch');st.markdown(f"<div class='comic-name'>{name}</div><div class='comic-role'>{CHAR[name][1]}</div><div class='bubble' style='border-color:{color}'>{text}</div></div>",unsafe_allow_html=True)
 def exchange(a,ta,sa,b,tb,sb):
@@ -68,10 +68,17 @@ st.markdown("<div class='eyebrow'>BLACKRIDGE CAPITAL · SPECIAL SITUATIONS CREDI
 
 if scene=='intro':
     header('INTRO · THE PEOPLE IN THE ROOM','Meet Blackridge','Eight professionals move one model from an unfinished file to the executive committee. The portraits change expression as the analytical stakes rise.')
-    cols=st.columns(4,gap='small');intro=[('Eric Dale','Model risk and stale marks'),('Peter Sullivan','Monte Carlo, VaR, and CVaR'),('Seth Bregman','Questions and interpretation'),('Sarah Robertson','Validation and governance'),('Jared Cohen','Credit and contagion'),('Will Emerson','Execution and liquidity'),('Sam Rogers','Portfolio judgment'),('John Tuld','Executive synthesis')]
-    for i,(n,line) in enumerate(intro):
-        with cols[i%4]:st.image(portrait(n,'neutral'),width='stretch');st.markdown(f"**{n}** · {CHAR[n][1]}  \
-*{line}*")
+    intro=[('Eric Dale','Model risk and stale marks'),('Peter Sullivan','Monte Carlo, VaR, and CVaR'),('Seth Bregman','Questions and interpretation'),('Sarah Robertson','Validation and governance'),('Jared Cohen','Credit and contagion'),('Will Emerson','Execution and liquidity'),('Sam Rogers','Portfolio judgment'),('John Tuld','Executive synthesis')]
+    for row in range(2):
+        cols=st.columns(4,gap='small')
+        for j,col in enumerate(cols):
+            n,line=intro[row*4+j]
+            with col:
+                with st.container(border=True):
+                    st.image(portrait(n,'neutral'),width='stretch')
+                    st.markdown(f"**{n}**")
+                    st.caption(CHAR[n][1])
+                    st.markdown(f"*{line}*")
     nav('cold_open')
 elif scene=='cold_open':
     header('4:17 PM · RISK FLOOR','The last file out of the building','Eric leaves behind GHOSTLINE_TAIL_RECALIBRATION_v17_FINAL. Peter sees that the model changes not only the loan, but the assumptions connecting the entire book.')
