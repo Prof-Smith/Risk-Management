@@ -1,31 +1,63 @@
 import streamlit as st
+
+from components.risk_visuals import render_risk_lab
 from services.session_manager import move_to
 
 RISKS = {
-    "Market": ("What moves?", "Volatility, rates, prices, and correlations"),
-    "Credit": ("Who fails?", "Default, migration, recovery, and concentration"),
-    "Liquidity": ("What cannot be exited?", "Depth, spreads, liquidation time, and funding"),
-    "Operational": ("What breaks?", "People, processes, systems, and controls"),
-    "Model": ("What is wrong?", "Assumptions, estimation, validation, and governance"),
-    "Systemic": ("What propagates?", "Networks, common exposures, and feedback loops"),
+    "Market": {"question": "What moves?", "scope": "Prices, rates, volatility, and correlation", "icon": "↗"},
+    "Credit": {"question": "Who fails?", "scope": "Default, migration, recovery, and concentration", "icon": "◎"},
+    "Liquidity": {"question": "What cannot be exited?", "scope": "Depth, spreads, liquidation time, and funding", "icon": "≋"},
+    "Operational": {"question": "What breaks?", "scope": "People, processes, systems, and controls", "icon": "⚙"},
+    "Model": {"question": "What is wrong?", "scope": "Assumptions, estimation, validation, and governance", "icon": "△"},
+    "Systemic": {"question": "What propagates?", "scope": "Networks, common exposures, and feedback loops", "icon": "⌘"},
 }
 
 
+def _select_risk(name: str) -> None:
+    st.session_state.selected_risk = name
+
+
 def render() -> None:
-    st.caption("01 / INTEGRATED RISK MAP")
+    st.caption("01 / INTEGRATED RISK LAB")
     st.title("Risk is a connected system")
-    st.write("Select a domain to connect the concept, model, and professional decision.")
-    cols = st.columns(3)
-    for index, (name, (question, scope)) in enumerate(RISKS.items()):
-        with cols[index % 3]:
-            with st.container(border=True):
-                st.subheader(name)
-                st.markdown(f"**{question}**")
-                st.caption(scope)
-                if st.button(f"Explore {name}", key=f"risk_{name}", use_container_width=True):
-                    st.session_state.selected_risk = name
+    st.write(
+        "Choose a risk channel. The workbench below updates to show a standard visual, "
+        "a decision metric, and a controllable stress test."
+    )
+
     selected = st.session_state.get("selected_risk", "Market")
-    st.info(f"Selected domain: **{selected}**. The flagship case combines market, liquidity, and model risk.")
-    if st.button("Enter the flagship case", type="primary"):
-        move_to("live_case")
-        st.rerun()
+    columns = st.columns(6)
+    for column, (name, details) in zip(columns, RISKS.items()):
+        with column:
+            active = name == selected
+            st.markdown(
+                f"<div style='font-size:1.7rem;text-align:center;color:{'#18A7A0' if active else '#9FB0BE'}'>"
+                f"{details['icon']}</div>",
+                unsafe_allow_html=True,
+            )
+            if st.button(
+                name,
+                key=f"risk_{name}",
+                type="primary" if active else "secondary",
+                use_container_width=True,
+                on_click=_select_risk,
+                args=(name,),
+            ):
+                pass
+            st.caption(details["question"])
+
+    selected = st.session_state.get("selected_risk", "Market")
+    st.divider()
+    render_risk_lab(selected)
+
+    left, right = st.columns([3, 1])
+    with left:
+        st.info(
+            f"Active channel: **{selected} risk**. Use the controls above the visual to alter the scenario. "
+            "All starter data are synthetic and intended to demonstrate the interaction pattern."
+        )
+    with right:
+        if st.button("Send this shock to the flagship case", type="primary", use_container_width=True):
+            st.session_state.case_origin_risk = selected
+            move_to("live_case")
+            st.rerun()
