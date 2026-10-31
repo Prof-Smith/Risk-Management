@@ -1,0 +1,54 @@
+id: northstar_private_credit
+title: Northstar Direct Lending Fund III
+subtitle: The Meridian Cloud Systems Amendment Decision
+presentation_role: Investment Committee member
+case_date: 2026-10-30
+fictional: true
+narrative: >
+  Northstar Direct Lending Fund III holds a senior secured first-lien loan to
+  Meridian Cloud Systems, a fictional middle-market provider of workflow and
+  compliance software. Meridian is current on its debt, but slower customer
+  renewals and implementation delays have weakened cash generation. Management
+  requests an amendment that would temporarily reduce cash interest, permit a
+  portion of interest to be paid in kind, and reset the leverage covenant.
+mandate: >
+  Decide whether Northstar should approve the amendment, approve it with stronger
+  lender protections, require an equity cure and partial paydown, or transfer the
+  exposure to special situations.
+decision_prompt: What should Northstar do with the Meridian exposure?
+decision_choices:
+  - Approve the amendment
+  - Approve with stronger protections
+  - Require equity cure and partial paydown
+  - Transfer to special situations
+risk_domains:
+  - Credit risk
+  - Liquidity risk
+  - Valuation risk
+  - Model risk
+  - Portfolio concentration
+baseline:
+  commitment_mm: 85.0
+  outstanding_mm: 80.0
+  cash_rate_pct: 10.75
+  pik_rate_pct: 0.0
+  enterprise_value_mm: 420.0
+  lender_value_mm: 340.0
+  ebitda_mm: 38.0
+  cash_interest_mm: 8.6
+  maintenance_capex_mm: 5.0
+  cash_taxes_mm: 2.0
+  working_capital_use_mm: 3.0
+  senior_debt_mm: 205.0
+  net_leverage_x: 5.4
+  interest_coverage_x: 1.55
+  covenant_limit_x: 5.75
+  portfolio_nav_mm: 1250.0
+  position_nav_pct: 6.4
+  recovery_pct: 72.0
+  probability_default_pct: 6.0
+  risk_limit_expected_loss_mm: 4.5
+information_boundary: >
+  All figures, firms, and outcomes are synthetic. Market context inspired the
+  instructional design, but the case does not represent any real borrower, fund,
+  manager, or transaction.

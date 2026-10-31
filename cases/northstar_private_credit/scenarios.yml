@@ -1,0 +1,102 @@
+scenarios:
+  - id: base_case
+    label: Base case — amendment stabilizes the borrower
+    probability_weight_pct: 45
+    description: >
+      Renewals improve gradually, cost actions hold, and the company returns to
+      modest growth. The amendment prevents a liquidity event but delays deleveraging.
+    assumptions:
+      revenue_growth_pct: 3.0
+      ebitda_margin_pct: 17.0
+      cash_rate_pct: 9.25
+      pik_rate_pct: 2.0
+      exit_multiple_x: 8.0
+      probability_default_pct: 4.0
+      recovery_pct: 78.0
+      revolver_draw_mm: 5.0
+    covenant:
+      net_leverage_limit_x: 6.25
+      minimum_liquidity_mm: 18.0
+    decision_signal: Approve only with enhanced reporting, pricing, and sponsor support.
+
+  - id: downside_case
+    label: Downside — amend and extend becomes delayed recognition
+    probability_weight_pct: 30
+    description: >
+      Customer churn rises, new bookings slow, and PIK interest compounds the debt
+      balance. Reported covenant relief masks deteriorating debt service capacity.
+    assumptions:
+      revenue_growth_pct: -6.0
+      ebitda_margin_pct: 12.0
+      cash_rate_pct: 8.0
+      pik_rate_pct: 4.0
+      exit_multiple_x: 6.5
+      probability_default_pct: 14.0
+      recovery_pct: 58.0
+      revolver_draw_mm: 14.0
+    covenant:
+      net_leverage_limit_x: 6.75
+      minimum_liquidity_mm: 12.0
+    decision_signal: Require an equity cure and principal paydown before consenting.
+
+  - id: liquidity_shock
+    label: Liquidity shock — redemptions force price discovery
+    probability_weight_pct: 15
+    description: >
+      Northstar faces elevated investor redemption requests while secondary bids for
+      private loans soften. Meridian remains current, but the fund may need liquidity.
+    assumptions:
+      revenue_growth_pct: 0.0
+      ebitda_margin_pct: 15.0
+      cash_rate_pct: 9.25
+      pik_rate_pct: 2.0
+      exit_multiple_x: 7.0
+      probability_default_pct: 8.0
+      recovery_pct: 62.0
+      secondary_bid_pct_of_par: 76.0
+      fund_redemption_request_pct_nav: 12.0
+    covenant:
+      net_leverage_limit_x: 6.25
+      minimum_liquidity_mm: 18.0
+    decision_signal: Evaluate the loan jointly as a credit exposure and a fund-liquidity asset.
+
+  - id: ai_disruption
+    label: Structural shock — AI compresses software economics
+    probability_weight_pct: 10
+    description: >
+      Low-cost AI-native competitors pressure pricing and reduce switching costs.
+      The underwriting question changes from temporary cyclicality to business-model durability.
+    assumptions:
+      revenue_growth_pct: -10.0
+      ebitda_margin_pct: 9.0
+      cash_rate_pct: 8.0
+      pik_rate_pct: 4.5
+      exit_multiple_x: 5.0
+      probability_default_pct: 22.0
+      recovery_pct: 42.0
+      revolver_draw_mm: 18.0
+    covenant:
+      net_leverage_limit_x: 7.0
+      minimum_liquidity_mm: 10.0
+    decision_signal: Transfer to special situations unless the sponsor provides substantial new equity.
+
+  - id: sponsor_support
+    label: Upside intervention — sponsor protects enterprise value
+    probability_weight_pct: 0
+    facilitator_only: true
+    description: >
+      The sponsor offers a fresh equity contribution, a mandatory principal paydown,
+      tighter reporting, and a board observer right in exchange for covenant relief.
+    assumptions:
+      new_equity_mm: 30.0
+      principal_paydown_mm: 20.0
+      revenue_growth_pct: 2.0
+      ebitda_margin_pct: 16.0
+      cash_rate_pct: 9.5
+      pik_rate_pct: 1.5
+      probability_default_pct: 3.0
+      recovery_pct: 84.0
+    covenant:
+      net_leverage_limit_x: 5.75
+      minimum_liquidity_mm: 22.0
+    decision_signal: Approve a tightly conditioned amendment with measurable milestones.

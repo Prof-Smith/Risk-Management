@@ -1,15 +1,22 @@
-# Experienced Cases Upgrade
+# Northstar Private Debt Lab
 
-Replace `experience/live_case.py` and add `components/case_experience.py`.
+A standalone Streamlit implementation of the fictional Northstar Direct Lending Fund III / Meridian Cloud Systems amendment case.
 
-This changes each case from a dashboard into a five-room experience:
+## Run locally
 
-1. Briefing
-2. Evidence Room
-3. Decision Desk
-4. Shock Room
-5. Board Defense
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-The workflow preserves the participant's initial action and confidence, introduces a controllable shock, calculates a decision boundary, and requires a defended final recommendation.
+## Deploy
 
-The current charts use deterministic synthetic data and the scaffold's illustrative risk engine. Replace those calculations with the validated course models and actual case evidence before instructional use.
+Place this folder's contents in the root of a GitHub repository and deploy `app.py` through Streamlit Community Cloud.
+
+## Experience sequence
+
+Mandate → Evidence → Commit → Scenario Lab → Sponsor Offer → Board Defense
+
+All firms, figures, probabilities, and outcomes are synthetic. The calculations are teaching models rather than investment advice or representations of real transactions.

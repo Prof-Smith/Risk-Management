@@ -1,0 +1,15 @@
+briefing:
+  - Is Meridian facing a temporary liquidity problem, a solvency problem, or both?
+  - Which figure is most decision-relevant: leverage, interest coverage, liquidity, retention, or collateral value?
+evidence_room:
+  - Does covenant relief create value or delay recognition of deterioration?
+  - How should PIK interest affect the committee's interpretation of current performance?
+decision_desk:
+  - What lender protection is non-negotiable?
+  - What evidence would make approval defensible?
+shock_room:
+  - Which scenario first causes expected loss to breach the fund limit?
+  - How does a fund-level liquidity event change the loan-level decision?
+board_defense:
+  - State the final recommendation and its numerical reversal condition.
+  - Identify one model limitation and one governance control.
