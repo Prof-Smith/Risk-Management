@@ -1,12 +1,17 @@
-# Northstar Private Debt Lab v2
+# Northstar Private Debt Lab v3
 
-This version turns comments into a persistent decision journal and links borrower deterioration to a fund-level Monte Carlo loss distribution, VaR/CVaR, valuation staleness, redemption pressure, liquidity waterfall, forced-sale loss, economic NAV, and an economic asset/liability coverage ratio.
+Version 3 uses a four-act story:
 
-## Run
+1. Apparent calm
+2. Hidden crack
+3. The run
+4. Committee decision
+
+The interface uses native Streamlit containers instead of hard-coded dark HTML cards, so it remains readable in light and dark themes. Written reasoning is saved by stage, displayed in one compact committee-record table, and exported with the data and decisions.
+
+Run with:
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-All data and firms are fictional. The financial engine is a transparent teaching model, not investment advice or a production risk model.
