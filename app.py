@@ -29,7 +29,7 @@ for k,v in {'accepted':False,'scene':'intro','confidence':.99}.items():st.sessio
 PEOPLE=[('Eric Dale','eric','Model risk'),('Peter Sullivan','peter','Quantitative risk'),('Seth Bregman','seth','Interpretation'),('Sarah Robertson','sarah','Governance'),('Jared Cohen','jared','Structured credit'),('Will Emerson','will','Execution'),('Sam Rogers','sam','Portfolio judgment'),('John Tuld','john','Executive synthesis')]
 
 st.markdown('''<style>
-.block-container{max-width:1320px;padding-top:1.15rem;padding-bottom:.65rem}.eyebrow{color:#0f7890;font-size:.68rem;font-weight:800;letter-spacing:.13em}.ttl{font:700 1.62rem Georgia;margin:.05rem 0;color:#102a43}.copy{font:.92rem/1.35 Georgia;max-width:1050px;margin-bottom:.35rem}.cast-card{border:1px solid #cbd6dc;border-radius:9px;background:white;padding:.32rem;min-height:188px}.dialogue{display:flex;gap:.55rem;align-items:center;border:1px solid #cbd6dc;border-radius:9px;background:white;padding:.42rem;min-height:122px}.dialogue img{width:104px;height:104px;object-fit:cover;border-radius:8px;flex:none}.bubble{border-left:4px solid #0f7890;background:#edf5f6;padding:.5rem .6rem;border-radius:5px;font:italic .82rem/1.28 Georgia}.role{font-size:.63rem;color:#60788a;text-transform:uppercase}.stButton>button{font-weight:700}[data-testid="stMetricValue"]{font-size:1.18rem}.element-container{margin-bottom:.08rem}h1{font-size:1.78rem!important;margin:.05rem 0!important}div[data-testid="stImage"] img{max-height:112px;object-fit:cover;border-radius:7px}.stProgress{margin-bottom:0}.stTabs [data-baseweb="tab"]{height:32px}
+.block-container{width:calc(100vw - 28px);max-width:none!important;padding:1.0rem 14px .65rem!important}.eyebrow{color:#0f7890;font-size:.68rem;font-weight:800;letter-spacing:.13em}.ttl{font:700 clamp(1.35rem,2vw,1.72rem) Georgia;margin:.05rem 0;color:#102a43}.copy{font:.92rem/1.35 Georgia;max-width:none;margin-bottom:.35rem}.cast-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.cast-card{display:flex;align-items:center;gap:10px;border:1px solid #cbd6dc;border-radius:10px;background:#fff;padding:9px 10px;min-height:96px;box-shadow:0 2px 8px rgba(16,42,67,.06)}.cast-card img{width:72px;height:72px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #dce7eb;flex:none}.cast-name{font-weight:800;color:#102a43;line-height:1.1}.cast-role{font-size:.67rem;color:#60788a;text-transform:uppercase;margin-top:3px}.cast-focus{font:italic .77rem/1.2 Georgia;color:#31546a;margin-top:5px}.dialogue{display:flex;gap:.55rem;align-items:center;border:1px solid #cbd6dc;border-radius:9px;background:white;padding:.42rem;min-height:112px}.dialogue img{width:92px;height:92px;object-fit:cover;object-position:center 35%;border-radius:50%;border:2px solid #dce7eb;flex:none}.bubble{border-left:4px solid #0f7890;background:#edf5f6;padding:.5rem .6rem;border-radius:5px;font:italic .82rem/1.28 Georgia}.role{font-size:.63rem;color:#60788a;text-transform:uppercase}.stButton>button{font-weight:700}[data-testid="stMetricValue"]{font-size:1.18rem}.element-container{margin-bottom:.08rem}h1{font-size:1.78rem!important;margin:.05rem 0!important}.stProgress{margin-bottom:0}.stTabs [data-baseweb="tab"]{height:32px}@media(max-width:900px){.block-container{width:100%;padding-left:10px!important;padding-right:10px!important}.cast-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>''',unsafe_allow_html=True)
 
 def path(key,state):return str(ROOT/'assets/expressions'/f'{key}_{state}.jpg')
@@ -46,6 +46,11 @@ def talk(name,key,state,text):
     import base64
     raw=Path(path(key,state)).read_bytes();b64=base64.b64encode(raw).decode()
     st.markdown(f"<div class='dialogue'><img src='data:image/jpeg;base64,{b64}'><div><b>{name}</b><div class='role'>{dict((x[1],x[2]) for x in PEOPLE)[key]}</div><div class='bubble'>{text}</div></div></div>",unsafe_allow_html=True)
+def cast_card(name,key,focus):
+    import base64
+    raw=Path(path(key,'neutral')).read_bytes();b64=base64.b64encode(raw).decode()
+    return f"<div class='cast-card'><img src='data:image/jpeg;base64,{b64}' alt='Editorial sketch of {name}'><div><div class='cast-name'>{name}</div><div class='cast-role'>{dict((x[1],x[2]) for x in PEOPLE)[key]}</div><div class='cast-focus'>{focus}</div></div></div>"
+
 def style(fig,title,h=278):
     fig.update_layout(title=dict(text=title,font=dict(size=15)),height=h,margin=dict(l=40,r=18,t=45,b=34),paper_bgcolor='rgba(0,0,0,0)',plot_bgcolor='#fcfbf8',font=dict(size=9,color='#102a43'),legend=dict(orientation='h',y=1.08),uirevision='v2');fig.update_yaxes(gridcolor='rgba(120,120,120,.12)');return fig
 def losses(reg):return -(R[R.regime.eq(reg)][H.pool].to_numpy()@H.weight.to_numpy())*H.exposure_mm.sum()
@@ -68,11 +73,8 @@ if not st.session_state.accepted:
 st.title('One Night Inside the Tail');timeline();st.divider();s=st.session_state.scene
 if s=='intro':
     header('INTRO','Meet the room','Each role enters with a scene-specific neutral, concerned, or decisive expression. The full video remains available below the cast.')
-    cols=st.columns(4,gap='small')
-    for i,(name,key,focus) in enumerate(PEOPLE):
-        with cols[i%4]:
-            st.markdown("<div class='cast-card'>",unsafe_allow_html=True);st.image(path(key,'neutral'),width='stretch');st.markdown(f"**{name}**  \
-<small>{focus}</small>",unsafe_allow_html=True);st.markdown('</div>',unsafe_allow_html=True)
+    cards=''.join(cast_card(name,key,focus) for name,key,focus in PEOPLE)
+    st.markdown(f"<div class='cast-grid'>{cards}</div>",unsafe_allow_html=True)
     with st.expander('Replay the risk-management introduction'):st.video(VIDEO_URL)
     nav('eric')
 elif s=='eric':
