@@ -1,20 +1,28 @@
-# Northstar Portfolio Risk Lab v4
+# Northstar VaR & CVaR Shock Lab
 
-A fictional private-debt manager experience built around an eight-loan portfolio and five connected risk lenses.
+This version deliberately centers one event and one analytical engine.
 
-## Course calculations
-- EAD × PD × LGD expected loss
-- Portfolio expected loss
-- Weighted PD and LGD
-- HHI concentration
-- Weighted duration
-- Monte Carlo VaR and CVaR
-- Stress revaluation
-- Valuation gap
-- Liquidity haircut
-- Cash shortfall and forced-sale loss
+## Event
+AI-driven repricing of software credit, beginning with Meridian Cloud and spilling into the broader private-debt portfolio.
+
+## Core calculations
+- Monte Carlo portfolio loss distribution
+- VaR at the selected confidence level
+- CVaR at the selected confidence level
+
+## Derived calculations
+- Change in VaR
+- Change in CVaR
+- CVaR minus VaR tail gap
+- Borrower contribution in scenarios beyond VaR
+- Numerical CVaR reversal condition
 
 ## Story
-The Book → Risk Signals → Stress Test → Liquidity → Investment Committee
+Portfolio → Shock mechanics → Tail anatomy → Committee decision
 
-Run with `streamlit run app.py` after installing `requirements.txt`.
+Run:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
