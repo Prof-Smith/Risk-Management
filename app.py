@@ -38,7 +38,7 @@ if not st.session_state.accepted:
 st.title('One Night Inside the Tail');timeline();st.divider();s=st.session_state.scene
 if s=='intro':
  header('INTRO','Meet the room','One consolidated storyboard introduces the eight employees, their positions, and the analytical perspective each person brings to the overnight crisis.')
- st.image(str(ROOT/'assets/blackridge_character_board.png'),width='stretch')
+ st.image(str(ROOT/'assets/blackridge_employee_profiles.png'),width='stretch')
  c1,c2,c3=st.columns(3)
  with c1:st.markdown("<div class='insight'><b>1. Evidence enters</b><br>Eric connects external mortgage pricing to a possible failure in the historical calibration.</div>",unsafe_allow_html=True)
  with c2:st.markdown("<div class='insight'><b>2. The model changes</b><br>Peter integrates updated volatility and dependence into the same mortgage exposures.</div>",unsafe_allow_html=True)
