@@ -1,17 +1,20 @@
-# Northstar Private Debt Lab v3
+# Northstar Portfolio Risk Lab v4
 
-Version 3 uses a four-act story:
+A fictional private-debt manager experience built around an eight-loan portfolio and five connected risk lenses.
 
-1. Apparent calm
-2. Hidden crack
-3. The run
-4. Committee decision
+## Course calculations
+- EAD × PD × LGD expected loss
+- Portfolio expected loss
+- Weighted PD and LGD
+- HHI concentration
+- Weighted duration
+- Monte Carlo VaR and CVaR
+- Stress revaluation
+- Valuation gap
+- Liquidity haircut
+- Cash shortfall and forced-sale loss
 
-The interface uses native Streamlit containers instead of hard-coded dark HTML cards, so it remains readable in light and dark themes. Written reasoning is saved by stage, displayed in one compact committee-record table, and exported with the data and decisions.
+## Story
+The Book → Risk Signals → Stress Test → Liquidity → Investment Committee
 
-Run with:
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+Run with `streamlit run app.py` after installing `requirements.txt`.
