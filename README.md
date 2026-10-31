@@ -1,28 +1,32 @@
-# Northstar VaR & CVaR Shock Lab
+# Blackridge: One Night Inside the Tail
 
-This version deliberately centers one event and one analytical engine.
+A cinematic Streamlit teaching experience focused on one AI-driven software-credit shock and its effect on portfolio VaR and CVaR.
 
-## Event
-AI-driven repricing of software credit, beginning with Meridian Cloud and spilling into the broader private-debt portfolio.
+## Removed
+- Participant decisions
+- Recommendation forms
+- Risk-tolerance inputs
+- Reversal-condition inputs
+- Scoring and branching based on choices
 
-## Core calculations
-- Monte Carlo portfolio loss distribution
-- VaR at the selected confidence level
-- CVaR at the selected confidence level
+## Retained
+- Eight-scene narrative
+- Character commentary
+- Blackridge cast sketch
+- Ghostline shock slider
+- Base and stressed Monte Carlo distributions
+- VaR and CVaR
+- Sensitivity challenge
+- Tail-contribution chart
+- Final analytical briefing
 
-## Derived calculations
-- Change in VaR
-- Change in CVaR
-- CVaR minus VaR tail gap
-- Borrower contribution in scenarios beyond VaR
-- Numerical CVaR reversal condition
-
-## Story
-Portfolio → Shock mechanics → Tail anatomy → Committee decision
-
-Run:
+## Run
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
+
+## Attribution
+
+The app is an original fictional teaching simulation inspired by the organizational tension of *Margin Call* (2011), written and directed by J. C. Chandor. It does not reproduce film dialogue. The app is not affiliated with or endorsed by the film, its creators, cast, producers, or distributors.
