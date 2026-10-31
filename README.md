@@ -1,11 +1,14 @@
-# Blackridge Comic Risk Lab v3
+# Blackridge Authentic Cast Lab
 
-Changes:
-- Replaces the jagged histogram with smoothed density curves, direct VaR/CVaR callouts, a focused x-axis, and a restrained tail highlight.
-- Adds three expression variants for each fictional cast member: neutral, concerned, and decisive.
-- Uses scene-specific expressions during synthetic exchanges.
-- Reduces jumpiness by putting Monte Carlo and shock controls inside forms, caching simulation outputs, fixing chart sizes, preserving chart UI state, and disabling Plotly toolbars.
-- Keeps the disclaimer gate, complete cast introduction, and no-decision ending.
+This revision replaces synthetic likenesses with externally loaded, licensed actor photographs from Wikimedia Commons and updates the Monte Carlo model so the loss distributions are continuous and visually interpretable.
 
-## Portrait correction
-The cast introduction now uses square, face-centered portrait crops generated from the expression sheet. The previous narrow source panels were being clipped by a global image-height rule, which produced neck and torso crops. The image rule now preserves each square portrait at a consistent aspect ratio in both the introduction and dialogue panels.
+## Visual changes
+- Authentic actor photographs for the eight *Margin Call* roles
+- Consistent 4:5 portrait framing
+- Image credits and license notes
+- Continuous mark-to-market loss channel plus jump-to-default loss channel
+- Cleaner baseline/stressed distributions
+- VaR/CVaR callouts and shaded tail
+- Cached simulations and form-based controls to reduce rerun movement
+
+Run with `streamlit run app.py` after installing `requirements.txt`.
