@@ -25,7 +25,7 @@ def style(fig,title,h=330):
     fig.update_xaxes(showgrid=False,zeroline=False);fig.update_yaxes(gridcolor='rgba(128,128,128,.14)',zeroline=False);return fig
 def portrait(name):return f"assets/characters/{CHAR[name][0]}"
 def panel(name,text):
-    color=CHAR[name][2];st.markdown(f"<div class='comic' style='border-color:{color}'>",unsafe_allow_html=True);st.image(portrait(name),use_container_width=True);st.markdown(f"<div class='comic-name'>{name}</div><div class='comic-role'>{CHAR[name][1]}</div><div class='bubble' style='border-color:{color}'>{text}</div></div>",unsafe_allow_html=True)
+    color=CHAR[name][2];st.markdown(f"<div class='comic' style='border-color:{color}'>",unsafe_allow_html=True);st.image(portrait(name),width='stretch');st.markdown(f"<div class='comic-name'>{name}</div><div class='comic-role'>{CHAR[name][1]}</div><div class='bubble' style='border-color:{color}'>{text}</div></div>",unsafe_allow_html=True)
 def exchange(a,ta,b,tb):
     x,y=st.columns(2,gap='medium')
     with x:panel(a,ta)
@@ -34,7 +34,7 @@ def goto(s):st.session_state.scene=s;st.rerun()
 def nav(n=None):
     a,b=st.columns([5,1]);i=SCENES.index(st.session_state.scene)
     if i>0 and a.button('← Previous'):goto(SCENES[i-1])
-    if n and b.button('Continue →',type='primary',use_container_width=True):goto(n)
+    if n and b.button('Continue →',type='primary',width='stretch'):goto(n)
 def timeline():
     i=SCENES.index(st.session_state.scene);st.progress((i+1)/len(SCENES));cs=st.columns(8)
     for j,(c,t) in enumerate(zip(cs,TIMES)):c.caption(('● ' if i==j else '')+t)
@@ -48,7 +48,7 @@ def dist_chart(base,stress):
     fig.add_vline(x=stress['cvar'],line_color='#C7474B',line_width=3,annotation_text=f"CVaR ${stress['cvar']:.1f}m")
     fig.update_xaxes(title='Portfolio loss ($m)');fig.update_yaxes(title='Relative frequency');return style(fig,'Before and after: the tail opens',350)
 def mc_convergence(severity,confidence,n):
-    checkpoints=np.unique(np.linspace(250,n,42,dtype=int));vars_,cvars_=[]
+    checkpoints=np.unique(np.linspace(250,n,42,dtype=int));vars_,cvars_=[],[]
     df=apply_ghostline_shock(BASE,severity)
     for k in checkpoints:
         r=simulate_losses(df,severity,confidence,simulations=int(k),seed=47);vars_.append(r['var']);cvars_.append(r['cvar'])
@@ -77,7 +77,7 @@ if scene=='intro':
     intro=[('Eric Dale','Model risk and stale marks'),('Peter Sullivan','Monte Carlo, VaR, and CVaR'),('Seth Bregman','Questions and interpretation'),('Sarah Robertson','Validation and governance'),('Jared Cohen','Credit and contagion'),('Will Emerson','Execution and liquidity'),('Sam Rogers','Portfolio judgment'),('John Tuld','Executive synthesis')]
     for i,(n,line) in enumerate(intro):
         with cols[i%4]:
-            st.image(portrait(n),use_container_width=True);st.markdown(f"**{n}**  \
+            st.image(portrait(n),width='stretch');st.markdown(f"**{n}**  \
 {CHAR[n][1]}  \
 *{line}*")
     nav('cold_open')
@@ -93,7 +93,7 @@ elif scene=='baseline':
     st.session_state.confidence=confidence;st.session_state.sim_steps=n
     base=simulate_losses(BASE,0,confidence,simulations=n,seed=47);m=st.columns(3);m[0].metric('Trials',f'{n:,}');m[1].metric('VaR estimate',f"${base['var']:.1f}m");m[2].metric('CVaR estimate',f"${base['cvar']:.1f}m")
     left,right=st.columns([1.65,1])
-    with left:st.plotly_chart(mc_convergence(0,confidence,n),use_container_width=True)
+    with left:st.plotly_chart(mc_convergence(0,confidence,n),width='stretch')
     with right:exchange('Seth Bregman','Why do the estimates move when we add trials?','Peter Sullivan','Sampling noise falls as the simulation grows. Confidence changes the threshold; trial count changes estimate stability.')
     nav('shock')
 
@@ -102,7 +102,7 @@ elif scene=='shock':
     severity=st.slider('Software-credit shock severity',0,100,st.session_state.severity,5);st.session_state.severity=severity
     stressed=apply_ghostline_shock(BASE,severity);b=BASE[BASE.asset.eq('Ghostline Systems')].iloc[0];a=stressed[stressed.asset.eq('Ghostline Systems')].iloc[0]
     m=st.columns(4);m[0].metric('Ghostline PD',f"{a.pd:.1%}",f"{a.pd-b.pd:+.1%}",delta_color='inverse');m[1].metric('Ghostline LGD',f"{a.lgd:.1%}",f"{a.lgd-b.lgd:+.1%}",delta_color='inverse');m[2].metric('Ghostline mark',f"{a['mark']:.1f}",f"{a['mark']-b['mark']:+.1f}");m[3].metric('Common loading',f"{.30+.35*severity/100:.2f}")
-    st.plotly_chart(sensitivity(st.session_state.confidence),use_container_width=True)
+    st.plotly_chart(sensitivity(st.session_state.confidence),width='stretch')
     nav('reveal')
 
 elif scene=='reveal':
@@ -110,14 +110,14 @@ elif scene=='reveal':
     base=simulate_losses(BASE,0,st.session_state.confidence);stress=simulate_losses(apply_ghostline_shock(BASE,st.session_state.severity),st.session_state.severity,st.session_state.confidence)
     m=st.columns(5);m[0].metric('VaR before',f"${base['var']:.1f}m");m[1].metric('VaR after',f"${stress['var']:.1f}m",f"+${stress['var']-base['var']:.1f}m",delta_color='inverse');m[2].metric('CVaR before',f"${base['cvar']:.1f}m");m[3].metric('CVaR after',f"${stress['cvar']:.1f}m",f"+${stress['cvar']-base['cvar']:.1f}m",delta_color='inverse');m[4].metric('Tail gap',f"${stress['tail_gap']:.1f}m")
     left,right=st.columns([1.65,1])
-    with left:st.plotly_chart(dist_chart(base,stress),use_container_width=True)
+    with left:st.plotly_chart(dist_chart(base,stress),width='stretch')
     with right:exchange('Seth Bregman','The VaR threshold moved.','Peter Sullivan','The losses beyond it moved farther. CVaR measures what happens after the threshold is crossed.')
     nav('interrogation')
 
 elif scene=='interrogation':
     header('10:48 PM · CHIEF RISK OFFICE','Interrogate the model','Sarah challenges whether the result survives less severe assumptions.')
     left,right=st.columns([1.7,1])
-    with left:st.plotly_chart(sensitivity(st.session_state.confidence),use_container_width=True)
+    with left:st.plotly_chart(sensitivity(st.session_state.confidence),width='stretch')
     with right:exchange('Sarah Robertson','A severe result is not automatically a credible result.','Peter Sullivan','The widening gap between VaR and CVaR shows how the tail changes as assumptions intensify.')
     nav('tail')
 
@@ -126,7 +126,7 @@ elif scene=='tail':
     stress=simulate_losses(apply_ghostline_shock(BASE,st.session_state.severity),st.session_state.severity,st.session_state.confidence);tc=stress['tail_contribution'].sort_values()
     fig=go.Figure(go.Bar(y=tc.index,x=tc.values,orientation='h',marker_color=['#C7474B' if n in ['Ghostline Systems','CipherWorks'] else '#168C86' for n in tc.index],text=[f'${v:.1f}m' for v in tc.values],textposition='outside'));fig.update_xaxes(title='Average loss beyond portfolio VaR ($m)')
     left,right=st.columns([1.65,1])
-    with left:st.plotly_chart(style(fig,'Contribution inside the stressed tail',340),use_container_width=True)
+    with left:st.plotly_chart(style(fig,'Contribution inside the stressed tail',340),width='stretch')
     with right:exchange('Jared Cohen','If Ghostline owns the tail, the risk is specific. If CipherWorks follows, the book contains hidden dependence.','Will Emerson','The model identifies the source of risk. It does not tell us the execution price.')
     nav('committee')
 

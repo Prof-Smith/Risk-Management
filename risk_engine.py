@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def apply_ghostline_shock(df,severity):
-    x=df.copy(); s=severity/100; ghost=x.asset.eq('Ghostline Systems'); adjacent=x.asset.eq('CipherWorks')
+    x=df.copy(); x['mark']=x['mark'].astype(float); s=severity/100; ghost=x.asset.eq('Ghostline Systems'); adjacent=x.asset.eq('CipherWorks')
     x.loc[ghost,'pd']*=1+2.4*s; x.loc[ghost,'lgd']+=.15*s; x.loc[ghost,'mark']-=18*s
     x.loc[adjacent,'pd']*=1+.65*s; x.loc[adjacent,'lgd']+=.05*s; x.loc[adjacent,'mark']-=5*s
     x['pd']*=1+.18*s; x['lgd']+=.025*s; x['mark']-=2*s
