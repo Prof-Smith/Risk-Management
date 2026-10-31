@@ -1,26 +1,11 @@
-# Blackridge Comic Risk Lab
+# Blackridge Comic Risk Lab v2
 
-A cinematic, comic-panel Streamlit experience focused on one AI-driven software-credit shock and its effect on portfolio VaR and CVaR.
+Updates:
+- Adds a disclaimer gate before the introduction.
+- Defines all eight characters in the introduction.
+- Adds a Monte Carlo convergence visualization to the baseline scene.
+- Fixes the Plotly fill-color error by using RGBA colors.
+- Compresses portraits, typography, chart heights, spacing, and scene layouts so each page is designed to fit a standard laptop/desktop viewport without vertical sprawl.
+- Retains comic-style synthetic character exchanges and excludes participant decision forms.
 
-## Data visualizations
-- Exposure map of the eight-loan book
-- Before/after loss distributions with tail shading
-- Log-scale loss exceedance curves
-- Shock-severity sensitivity curves for VaR and CVaR
-- Borrower contribution inside portfolio tail scenarios
-
-## Synthetic character interactions
-Eight sketched character portraits are integrated into paired comic panels. Each exchange bridges a story beat to the underlying model mechanics. All commentary is original to the fictional Blackridge case.
-
-## Intentionally excluded
-- Participant decisions
-- Recommendation forms
-- Scores
-- Risk-tolerance or reversal-condition inputs
-
-## Run
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+Run with `streamlit run app.py` after installing `requirements.txt`.
