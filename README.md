@@ -1,14 +1,17 @@
-# Blackridge Authentic Cast Lab
+# Blackridge Sketch Story Lab
 
-This revision replaces synthetic likenesses with externally loaded, licensed actor photographs from Wikimedia Commons and updates the Monte Carlo model so the loss distributions are continuous and visually interpretable.
+Website update with original editorial character sketches and context-specific expressions.
 
-## Visual changes
-- Authentic actor photographs for the eight *Margin Call* roles
-- Consistent 4:5 portrait framing
-- Image credits and license notes
-- Continuous mark-to-market loss channel plus jump-to-default loss channel
-- Cleaner baseline/stressed distributions
-- VaR/CVaR callouts and shaded tail
-- Cached simulations and form-based controls to reduce rerun movement
+## Character system
+Each of the eight roles has three local image assets:
+- neutral
+- concerned
+- decisive
 
-Run with `streamlit run app.py` after installing `requirements.txt`.
+The app selects the expression based on the scene. The sketches are local assets, so no external image host is required.
+
+## Risk visualization update
+The Monte Carlo model uses a continuous credit-repricing channel plus jump-to-default loss. This avoids the artificial near-zero spike seen in earlier versions. The distribution chart trims only extreme plotting outliers, preserves the underlying VaR/CVaR calculations, uses a wider smoothing kernel, and highlights the stressed tail cleanly.
+
+## Deployment
+Copy the contents into the root of the GitHub repository and deploy `app.py` through Streamlit Community Cloud.

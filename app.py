@@ -8,19 +8,10 @@ from risk_engine import apply_ghostline_shock, simulate_losses
 st.set_page_config(page_title='Blackridge: One Night Inside the Tail',page_icon='◈',layout='wide',initial_sidebar_state='collapsed')
 BASE=portfolio_data(); SCENES=['intro','cold_open','baseline','shock','reveal','interrogation','tail','committee']; TIMES=['INTRO','4:17 PM','6:08 PM','7:35 PM','9:10 PM','10:48 PM','12:16 AM','1:03 AM']
 for k,v in {'accepted':False,'scene':'intro','severity':60,'confidence':.95,'sim_steps':10000}.items():st.session_state.setdefault(k,v)
-CHAR={
- 'John Tuld':('https://upload.wikimedia.org/wikipedia/commons/6/6b/Jeremy_Irons_%28Berlin_Film_Festival_2011%29.jpg','Chief Executive Officer','#173F5F'),
- 'Eric Dale':('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/MJK32337_Stanley_Tucci_%28Final_Portrait%2C_Berlinale_2017%29.jpg/500px-MJK32337_Stanley_Tucci_%28Final_Portrait%2C_Berlinale_2017%29.jpg','Former Head of Risk','#526777'),
- 'Sarah Robertson':('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Demi_Moore_at_the_2024_Toronto_International_Film_Festival_3_%28cropped%29.jpg/500px-Demi_Moore_at_the_2024_Toronto_International_Film_Festival_3_%28cropped%29.jpg','Chief Risk Officer','#B7872B'),
- 'Sam Rogers':('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kevin_Spacey-9243.jpg/500px-Kevin_Spacey-9243.jpg','Head of Portfolio Management','#245B77'),
- 'Peter Sullivan':('https://upload.wikimedia.org/wikipedia/commons/e/ee/Zachary_Quinto.jpg','Quantitative Risk Analyst','#168C86'),
- 'Seth Bregman':('https://upload.wikimedia.org/wikipedia/commons/3/37/Penn_Badgley_TIFF_2010.jpg','Associate Risk Analyst','#3B8EBA'),
- 'Will Emerson':('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paul_Bettany_%2848469131797%29_%28cropped%29.jpg/800px-Paul_Bettany_%2848469131797%29_%28cropped%29.jpg','Head of Trading & Portfolio Solutions','#A56632'),
- 'Jared Cohen':('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Simon_Baker_2013_1.jpg/566px-Simon_Baker_2013_1.jpg','Head of Private Credit','#42735B')
-}
+CHAR={'John Tuld':('john','Chief Executive Officer','#173F5F'),'Eric Dale':('eric','Former Head of Risk','#526777'),'Sarah Robertson':('sarah','Chief Risk Officer','#B7872B'),'Sam Rogers':('sam','Head of Portfolio Management','#245B77'),'Peter Sullivan':('peter','Quantitative Risk Analyst','#168C86'),'Seth Bregman':('seth','Associate Risk Analyst','#3B8EBA'),'Will Emerson':('will','Head of Trading & Portfolio Solutions','#A56632'),'Jared Cohen':('jared','Head of Private Credit','#42735B')}
 
 st.markdown('''<style>
-.block-container{max-width:1360px;padding-top:.35rem;padding-bottom:.7rem}.eyebrow{color:#174868;font-size:.68rem;font-weight:800;letter-spacing:.14em}.scene-title{font-family:Georgia,serif;font-size:1.65rem;font-weight:700;color:#102A43;margin:.03rem 0 .12rem}.scene-copy{font-family:Georgia,serif;font-size:.96rem;line-height:1.38;max-width:1080px}.comic{border:1.5px solid #183B56;border-radius:12px;background:linear-gradient(145deg,#fff,#f2f6f8);padding:.5rem;box-shadow:3px 4px 0 #DCE5EA;height:100%}.comic-name{font-weight:900;color:#102A43;font-size:.9rem}.comic-role{font-size:.62rem;color:#60788A;text-transform:uppercase;letter-spacing:.06em}.bubble{background:white;color:#102A43;border:1.5px solid #183B56;border-radius:13px;padding:.58rem .7rem;margin-top:.35rem;font-family:Georgia,serif;font-size:.84rem;line-height:1.27;min-height:68px}.calc{border-left:4px solid #D69C35;background:#FFF9EC;color:#40351E;padding:.55rem .75rem;border-radius:6px;font-size:.82rem}.stButton>button{border-radius:7px;font-weight:750}[data-testid="stMetricValue"]{font-size:1.28rem}[data-testid="stMetricLabel"]{font-size:.72rem}.stProgress{margin-bottom:0}h1{font-size:1.9rem!important;margin:.03rem 0!important}.stForm{border:0!important;padding:0!important}div[data-testid="stImage"] img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;border-radius:10px}.element-container{margin-bottom:.15rem}
+.block-container{max-width:1360px;padding-top:.35rem;padding-bottom:.7rem}.eyebrow{color:#174868;font-size:.68rem;font-weight:800;letter-spacing:.14em}.scene-title{font-family:Georgia,serif;font-size:1.65rem;font-weight:700;color:#102A43;margin:.03rem 0 .12rem}.scene-copy{font-family:Georgia,serif;font-size:.96rem;line-height:1.38;max-width:1080px}.comic{border:1.5px solid #183B56;border-radius:12px;background:linear-gradient(145deg,#fff,#f2f6f8);padding:.5rem;box-shadow:3px 4px 0 #DCE5EA;height:100%}.comic-name{font-weight:900;color:#102A43;font-size:.9rem}.comic-role{font-size:.62rem;color:#60788A;text-transform:uppercase;letter-spacing:.06em}.bubble{background:white;color:#102A43;border:1.5px solid #183B56;border-radius:13px;padding:.58rem .7rem;margin-top:.35rem;font-family:Georgia,serif;font-size:.84rem;line-height:1.27;min-height:68px}.calc{border-left:4px solid #D69C35;background:#FFF9EC;color:#40351E;padding:.55rem .75rem;border-radius:6px;font-size:.82rem}.stButton>button{border-radius:7px;font-weight:750}[data-testid="stMetricValue"]{font-size:1.28rem}[data-testid="stMetricLabel"]{font-size:.72rem}.stProgress{margin-bottom:0}h1{font-size:1.9rem!important;margin:.03rem 0!important}.stForm{border:0!important;padding:0!important}div[data-testid="stImage"] img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 42%;border-radius:10px}.element-container{margin-bottom:.15rem}
 </style>''',unsafe_allow_html=True)
 
 def style(fig,title,h=320):
@@ -34,7 +25,7 @@ def convergence(confidence,max_trials):
     for n in checkpoints:
         r=sim(0,confidence,int(n),47);v.append(r['var']);c.append(r['cvar'])
     return checkpoints,np.array(v),np.array(c)
-def portrait(name,state='neutral'): return CHAR[name][0]
+def portrait(name,state):return f"assets/portraits/{CHAR[name][0]}_{state}.png"
 def panel(name,text,state='neutral'):
     color=CHAR[name][2];st.markdown(f"<div class='comic' style='border-color:{color}'>",unsafe_allow_html=True);st.image(portrait(name,state),width='stretch');st.markdown(f"<div class='comic-name'>{name}</div><div class='comic-role'>{CHAR[name][1]}</div><div class='bubble' style='border-color:{color}'>{text}</div></div>",unsafe_allow_html=True)
 def exchange(a,ta,sa,b,tb,sb):
@@ -50,8 +41,13 @@ def timeline():
     i=SCENES.index(st.session_state.scene);st.progress((i+1)/len(SCENES));cs=st.columns(8)
     for j,(c,t) in enumerate(zip(cs,TIMES)):c.caption(('● ' if i==j else '')+t)
 def header(k,t,c):st.markdown(f"<div class='eyebrow'>{k}</div><div class='scene-title'>{t}</div><div class='scene-copy'>{c}</div>",unsafe_allow_html=True)
-def smooth_density(losses,bins=110):
-    h,e=np.histogram(losses,bins=bins,density=True);kernel=np.array([1,2,3,4,3,2,1],dtype=float);kernel/=kernel.sum();h=np.convolve(h,kernel,mode='same');return (e[:-1]+e[1:])/2,h
+def smooth_density(losses,bins=120):
+    lo=max(0,float(np.quantile(losses,.002)))
+    hi=float(np.quantile(losses,.997))
+    h,e=np.histogram(losses,bins=bins,range=(lo,hi),density=True)
+    kernel=np.array([1,2,4,7,10,12,10,7,4,2,1],dtype=float);kernel/=kernel.sum()
+    h=np.convolve(h,kernel,mode='same')
+    return (e[:-1]+e[1:])/2,h
 def dist_chart(base,stress):
     fig=go.Figure()
     for color,fill,name,r in [('#168C86','rgba(22,140,134,.16)','Before shock',base),('#C7474B','rgba(199,71,75,.14)','After shock',stress)]:
@@ -76,7 +72,7 @@ if not st.session_state.accepted:
 st.markdown("<div class='eyebrow'>BLACKRIDGE CAPITAL · SPECIAL SITUATIONS CREDIT FUND IV</div>",unsafe_allow_html=True);st.title('One Night Inside the Tail');timeline();st.divider();scene=st.session_state.scene
 
 if scene=='intro':
-    header('INTRO · THE PEOPLE IN THE ROOM','Meet Blackridge','Eight professionals move one model from an unfinished file to the executive committee. The cast is represented with licensed photographs; original commentary carries the analytical perspective.')
+    header('INTRO · THE PEOPLE IN THE ROOM','Meet Blackridge','Eight professionals move one model from an unfinished file to the executive committee. The portraits change expression as the analytical stakes rise.')
     intro=[('Eric Dale','Model risk and stale marks'),('Peter Sullivan','Monte Carlo, VaR, and CVaR'),('Seth Bregman','Questions and interpretation'),('Sarah Robertson','Validation and governance'),('Jared Cohen','Credit and contagion'),('Will Emerson','Execution and liquidity'),('Sam Rogers','Portfolio judgment'),('John Tuld','Executive synthesis')]
     for row in range(2):
         cols=st.columns(4,gap='small')
@@ -88,8 +84,6 @@ if scene=='intro':
                     st.markdown(f"**{n}**")
                     st.caption(CHAR[n][1])
                     st.markdown(f"*{line}*")
-    with st.expander('Image credits and licenses'):
-        st.markdown('Actor photographs are loaded from Wikimedia Commons. Individual licenses and attribution links are listed in `IMAGE_CREDITS.md`. The photographs identify the actors associated with the film roles; all Blackridge dialogue and events remain fictional and original to this teaching case.')
     nav('cold_open')
 elif scene=='cold_open':
     header('4:17 PM · RISK FLOOR','The last file out of the building','Eric leaves behind GHOSTLINE_TAIL_RECALIBRATION_v17_FINAL. Peter sees that the model changes not only the loan, but the assumptions connecting the entire book.')
@@ -115,7 +109,7 @@ elif scene=='shock':
     with r:exchange('Eric Dale','The market moved. Ghostline’s private mark did not.','concerned','Peter Sullivan','Same book. New assumptions. Now rerun the distribution.','decisive')
     nav('reveal')
 elif scene=='reveal':
-    header('9:10 PM · RISK ROOM','The tail opens','The revised model combines continuous credit repricing with jump-to-default loss. The chart uses clean density curves, direct VaR/CVaR callouts, and a shaded tail.')
+    header('9:10 PM · RISK ROOM','The tail opens','The redesigned visualization uses smooth density curves, direct VaR/CVaR callouts, a focused x-axis, and a shaded tail without chart clutter.')
     base=sim(0,st.session_state.confidence,30000,47);stress=sim(st.session_state.severity,st.session_state.confidence,30000,47);m=st.columns(4);m[0].metric('VaR before',f"${base['var']:.1f}m");m[1].metric('VaR after',f"${stress['var']:.1f}m",f"+${stress['var']-base['var']:.1f}m",delta_color='inverse');m[2].metric('CVaR before',f"${base['cvar']:.1f}m");m[3].metric('CVaR after',f"${stress['cvar']:.1f}m",f"+${stress['cvar']-base['cvar']:.1f}m",delta_color='inverse')
     l,r=st.columns([1.75,1]);
     with l:st.plotly_chart(dist_chart(base,stress),width='stretch',config={'displayModeBar':False})
