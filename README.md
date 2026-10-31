@@ -1,24 +1,22 @@
-# Blackridge: One Night Inside the Tail
+# Blackridge Comic Risk Lab
 
-A cinematic Streamlit teaching experience focused on one AI-driven software-credit shock and its effect on portfolio VaR and CVaR.
+A cinematic, comic-panel Streamlit experience focused on one AI-driven software-credit shock and its effect on portfolio VaR and CVaR.
 
-## Removed
+## Data visualizations
+- Exposure map of the eight-loan book
+- Before/after loss distributions with tail shading
+- Log-scale loss exceedance curves
+- Shock-severity sensitivity curves for VaR and CVaR
+- Borrower contribution inside portfolio tail scenarios
+
+## Synthetic character interactions
+Eight sketched character portraits are integrated into paired comic panels. Each exchange bridges a story beat to the underlying model mechanics. All commentary is original to the fictional Blackridge case.
+
+## Intentionally excluded
 - Participant decisions
 - Recommendation forms
-- Risk-tolerance inputs
-- Reversal-condition inputs
-- Scoring and branching based on choices
-
-## Retained
-- Eight-scene narrative
-- Character commentary
-- Blackridge cast sketch
-- Ghostline shock slider
-- Base and stressed Monte Carlo distributions
-- VaR and CVaR
-- Sensitivity challenge
-- Tail-contribution chart
-- Final analytical briefing
+- Scores
+- Risk-tolerance or reversal-condition inputs
 
 ## Run
 
@@ -26,7 +24,3 @@ A cinematic Streamlit teaching experience focused on one AI-driven software-cred
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-## Attribution
-
-The app is an original fictional teaching simulation inspired by the organizational tension of *Margin Call* (2011), written and directed by J. C. Chandor. It does not reproduce film dialogue. The app is not affiliated with or endorsed by the film, its creators, cast, producers, or distributors.
