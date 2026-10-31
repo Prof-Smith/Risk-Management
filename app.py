@@ -4,7 +4,65 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-from risk_engine import load_data,portfolio_losses,historical_var_cvar,covariance_tables,rolling_vol
+from pathlib import Path
+
+# Self-contained risk engine. Keeping these functions in app.py avoids deployment
+# failures when only the entry-point file is updated in Streamlit Community Cloud.
+APP_ROOT = Path(__file__).resolve().parent
+DATA_ROOT = APP_ROOT / "data"
+
+def _build_fallback_data():
+    """Create the same deterministic synthetic case data if CSV files are absent."""
+    holdings = pd.DataFrame([
+        ['Prime RMBS AAA',1400,0.012,0.030],
+        ['Alt-A RMBS AAA',1000,0.020,0.055],
+        ['Subprime 2006-2 AAA',900,0.030,0.090],
+        ['Subprime 2006-2 BBB',600,0.055,0.180],
+        ['Subprime 2007-1 BBB-',500,0.075,0.280],
+        ['CDO Mezzanine Residual',800,0.085,0.350],
+    ], columns=['pool','exposure_mm','calm_annual_vol','crisis_annual_vol'])
+    holdings['weight'] = holdings.exposure_mm / holdings.exposure_mm.sum()
+    rng = np.random.default_rng(2007)
+    n = len(holdings)
+    calm_corr = np.full((n,n),.22); np.fill_diagonal(calm_corr,1)
+    crisis_corr = np.full((n,n),.62); crisis_corr[2:,2:] = .82; np.fill_diagonal(crisis_corr,1)
+    calm_vol = holdings.calm_annual_vol.to_numpy()/np.sqrt(252)
+    crisis_vol = holdings.crisis_annual_vol.to_numpy()/np.sqrt(252)
+    calm = rng.multivariate_normal(np.full(n,.00012),np.outer(calm_vol,calm_vol)*calm_corr,250)
+    crisis = rng.multivariate_normal(np.full(n,-.0009),np.outer(crisis_vol,crisis_vol)*crisis_corr,250)
+    jump_days = rng.choice(np.arange(250),size=18,replace=False)
+    for j,mag in zip(jump_days,rng.uniform(.010,.035,size=18)):
+        crisis[j] -= mag*np.array([.25,.45,.70,.95,1.10,1.25])
+    dates = pd.date_range('2006-07-03',periods=500,freq='B')
+    returns = pd.DataFrame(np.vstack([calm,crisis]),columns=holdings.pool)
+    returns.insert(0,'date',dates); returns.insert(1,'regime',['Initial']*250+['Updated']*250)
+    proxy = pd.DataFrame({'date':dates,'proxy_price':np.r_[100*np.exp(np.cumsum(rng.normal(0,.0015,250))),100*np.exp(np.cumsum(rng.normal(-.004,.012,250)))]})
+    proxy['proxy_price'] = proxy.proxy_price/proxy.proxy_price.iloc[0]*100
+    return holdings, returns, proxy
+
+def load_data():
+    files = [DATA_ROOT/'mortgage_pool_holdings.csv', DATA_ROOT/'mortgage_pool_returns.csv', DATA_ROOT/'external_market_proxy.csv']
+    if all(f.exists() for f in files):
+        return (pd.read_csv(files[0]), pd.read_csv(files[1],parse_dates=['date']), pd.read_csv(files[2],parse_dates=['date']))
+    return _build_fallback_data()
+
+def portfolio_losses(holdings,returns,regime):
+    x = returns[returns.regime.eq(regime)][holdings.pool].to_numpy()
+    weights = holdings.weight.to_numpy()
+    return -(x @ weights) * holdings.exposure_mm.sum()
+
+def historical_var_cvar(losses,confidence=.99):
+    var = float(np.quantile(losses,confidence))
+    tail = losses[losses >= var]
+    return {'var':var,'cvar':float(tail.mean()),'mean':float(losses.mean()),'vol':float(losses.std(ddof=1)),'tail_n':int(len(tail))}
+
+def covariance_tables(holdings,returns,regime):
+    x = returns[returns.regime.eq(regime)][holdings.pool]
+    return x.cov()*252, x.corr()
+
+def rolling_vol(holdings,returns,window=30):
+    x = returns[holdings.pool].to_numpy() @ holdings.weight.to_numpy()
+    return pd.Series(x,index=returns.date).rolling(window).std()*np.sqrt(252)
 
 st.set_page_config(page_title='Blackridge Mortgage Regime Lab',page_icon='◈',layout='wide',initial_sidebar_state='collapsed')
 H,R,P=load_data();SCENES=['intro','eric','peter','regime','tuld','sale','assignment'];TIMES=['INTRO','4:17 PM','6:08 PM','9:10 PM','12:16 AM','8:00 AM','ASSIGNMENT']
