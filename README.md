@@ -1,12 +1,3 @@
-# Blackridge Mortgage Regime Lab
+# Blackridge Mortgage Regime Lab Compact
 
-A historically informed fictional Streamlit case inspired by the organizational sequence of *Margin Call*.
-
-## Story
-Risk-management video → Eric’s external-market evidence → Peter’s covariance update → initial versus updated VaR/CVaR → Tuld escalation → Sam’s fire sale → student assignment.
-
-## Run
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+This version reduces portrait height, chart height, padding, and page width while moving each scene into a dense two-column layout. It is self-contained and has no local Python-module imports.
