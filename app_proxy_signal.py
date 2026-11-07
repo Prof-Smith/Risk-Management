@@ -439,4 +439,3 @@ elif scene == "assignment":
     d.download_button("Ex-post returns.csv", FUTURE.to_csv(index=False), "realized_crisis_returns.csv", "text/csv", width="stretch")
     if st.button("Reset decision for another attempt"):
         st.session_state.decision=None; st.session_state.rationale=""; st.session_state.decision_locked=False; goto_scene("intro")
-
